@@ -29,7 +29,7 @@
 									</li>
 									<li class="menu__item">
 										<a data-goto=".about" href="#" class="menu__link">
-											<span>#</span><span data-i18n="nav.about">about-me</span>
+												<span>#</span><span data-i18n="nav.about">about-me</span>
 										</a>
 									</li>
 									<li class="menu__item">
@@ -55,11 +55,32 @@
 				</div>
 		</header>
 		<main class="main">
-			<h1 data-i18n="greeting">Hello</h1>          <!-- заменили "Hello" на заголовок -->
-			<p data-i18n="subtitle">Web Developer</p>    <!-- добавили параграф -->
+			<section class="main-section main-section--anim">
+				<div class="main-section__social social">
+					<div class="social__item icon-github"></div>
+					<div class="social__item icon-dribble"></div>
+					<div class="social__item icon-figma"></div>
+				</div>
+				<div class="main-section__container">
+					<div class="main-section__content">
+						<h1 class="main-section__title">Denis is a <span>web designer</span> and <span>front-end developer</span></h1>
+						<div class="main-section__text">
+							<p>He crafts responsive websites where technologies meet creativity</p>
+						</div>
+						<button class="button main-section__button button__live">Contact me!!</button>
+					</div>
+					<div class="main-section__decor decor-main-section">
+						<div class="decor-main-section__box">
+							<div class="decor-main-section__image">
+								<img class="decor-main-section__picture" src="./images/main/denis.png" alt="Denis">
+							</div>
+							<h2 class="decor-main-section__subtitle icon-cube-primary">Currently working on <span>Portfolio</span></h2>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
-			<p data-i18n="footer_text">GoodBy</p>        <!-- футер тоже с ключом -->
 		</footer>
 	</div>
   <script src="js/translate.js"></script>

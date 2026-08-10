@@ -63,6 +63,15 @@ body {
 	color: var(--gray);
 	background-color: var(--background);
 }
+// ============== social =============
+
+.social {
+
+	&__item {
+	}
+}
+
+// ============== header ==============
 
 .header {
 	// =========== Плавающая шапка ==================
@@ -126,10 +135,12 @@ body {
 	&__item {
 	
 		select{
+			
 			font-family: var(--font-family);
 			font-weight: 600;
 			color: var(--gray);
 			background-color: var(--background);
+			text-transform: uppercase;
 			cursor: pointer;
 			option{
 				background-color: var(--background);
@@ -139,7 +150,8 @@ body {
 	}
 
 	&__link {
-
+		text-transform: lowercase;
+		font-size: 1rem;
 		span {
 			background-color: var(--background);
 			&:nth-child(1) {
@@ -158,4 +170,52 @@ body {
 
 	&__icon {
 	}
+}
+
+// ============= main-section =============
+
+.main-section {
+	
+	&__social {
+		padding-left: 1.0625rem;
+	}
+
+	&__container {
+		@include adaptive-value("padding-top", 123, 50, 0);
+		@include adaptive-value("padding-bottom", 112, 50, 0);
+	}
+
+	&__content {
+	}
+
+	&__title {
+	}
+
+	&__text {
+	}
+
+	&__button {
+	}
+
+	&__decor {
+	}
+}
+
+
+
+.decor-main-section {
+
+	&__box {
+	}
+
+	&__image {
+	}
+
+	&__picture {
+	}
+
+	&__subtitle {
+	}
+}
+.icon-cube-primary {
 }

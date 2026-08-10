@@ -17,7 +17,7 @@ const translations = {
   en: {
     'nav.home': 'Home',
     'nav.works': 'Works',
-    'nav.about': 'About Me',
+    'nav.about': 'About-Me',
     'nav.contacts': 'Contacts',
     'greeting': 'Hi, I\'m Denis',
     'subtitle': 'Web Developer',

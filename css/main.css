@@ -86,12 +86,15 @@ body {
   font-weight: 600;
   color: var(--gray);
   background-color: var(--background);
+  text-transform: uppercase;
   cursor: pointer;
 }
 .menu__item select option {
   background-color: var(--background);
 }
 .menu__link {
+  text-transform: lowercase;
+  font-size: 1rem;
   transition: color 0.5s;
 }
 .menu__link span {
@@ -107,4 +110,11 @@ body {
   .menu__link {
     font-size: 32px;
   }
+}
+.main-section__social {
+  padding-left: 1.0625rem;
+}
+.main-section__container {
+  padding-top: calc(50px + 73 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(50px + 62 * ((100vw - 320px) / 1600));
 }
