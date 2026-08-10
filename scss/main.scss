@@ -1,0 +1,161 @@
+﻿// Подключение шрифтов только в самом верху
+@import url("https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700&display=swap");
+// @import url("../css/fonts.css");
+@import "../css/components.css";
+@import "../css/components/anim.css";
+@import "../css/icons-fonts.css";
+@import "../scss/components/burger.css";
+// @import "../scss/components/ibj.scss";
+// $maxWidth: 1024;
+// @include adaptive-font(40, 24);(Использовать для адаптивного шрифта: 1 - мах знач, 2 - мин знач.)
+@import "../scss/adaptive-value.scss";
+// @include adaptive-value("padding", 40, 24, 0);(Использовать для адаптивного шрифта: 1 - мах знач, 2 - мин знач., 3 - режим)
+$maxWidth: 1920;
+$maxWidthContainer: 1054;
+
+:root {
+	--font-family: "Fira Code", sans-serif;
+	--primary: #c778dd;
+	--gray: #abb2bf;
+	--background: #282c33;
+	--white: #fff;
+}
+// color: var(--text-default);
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: clip; // работает с position: sticky;
+	// min-width: 320px;
+	// max-width: 1920px;
+	//block-size: 100%;
+}
+// ==== Чтоб прибить футер к низу разрешаем main расширяться
+
+.wrapper > main {
+	flex-grow: 1;
+}
+
+// ===============Ограничивающий контейнер через селктор класса============
+[class*="__container"] {
+	max-inline-size: 65.875rem;
+	margin-inline: auto;
+	padding-inline: 0.9375rem;
+
+	// max-width: 1230px;
+	// margin: 0 auto;
+	// padding: 0 15px;
+	// box-sizing: border-box;
+
+	// ======== Стандартная адаптивная сетка ================================
+	// @media (max-width: 1199.98px) {
+	//   max-width: 970px;
+	// }
+	// @media (max-width: 991.98px) {
+	//   max-width: 750px;
+	// }
+	// @media (max-width: 767.98px) {
+	//   max-width: none;
+	// }
+}
+body {
+	font-family: var(--font-family);
+	color: var(--gray);
+	background-color: var(--background);
+}
+
+.header {
+	// =========== Плавающая шапка ==================
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: var(--background);
+	transition: all 0.5s;
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.25rem;
+		min-height: 5rem;
+		@include adaptive-value("padding-block", 32, 20, 0);
+	}
+
+	&__logo {
+		font-weight: 700;
+		color: var(--white);
+		
+		z-index: 5;
+		flex-grow: 1;
+		position: relative;
+		padding-left: 1.25rem;
+		display: flex;
+		align-items: center;
+		&::before {
+			width: 100%;
+			height: 100%;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: url("../images/logo-white.svg") left no-repeat;
+		}
+	}
+
+	&__menu {
+	}
+
+	&__actions {
+	}
+}
+.menu {
+	&__body {
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		@include adaptive-value("gap", 32, 20, 0);
+		@media (max-width: 47.9988rem) {
+			flex-direction: column;
+			align-items: end;
+		}
+	}
+
+	&__item {
+	
+		select{
+			font-family: var(--font-family);
+			font-weight: 600;
+			color: var(--gray);
+			background-color: var(--background);
+			cursor: pointer;
+			option{
+				background-color: var(--background);
+			}
+		}
+		
+	}
+
+	&__link {
+
+		span {
+			background-color: var(--background);
+			&:nth-child(1) {
+				color: var(--primary);
+			}
+		}
+		transition: color 0.5s;
+		&:hover{
+			color: var(--white);
+		}
+		@media (max-width: 47.9988rem) {
+			font-size: 32px;
+		}
+		
+	}
+
+	&__icon {
+	}
+}
