@@ -139,7 +139,7 @@ body {
 			background: url("../images/logo-white.svg") left no-repeat;
 		}
 		transition: color 0.5s;
-		&:hover{
+		&:hover {
 			color: var(--primary);
 		}
 	}
@@ -276,7 +276,7 @@ body {
 	}
 	&__container {
 		@include adaptive-value("padding-top", 123, 80, 0);
-		@include adaptive-value("padding-bottom", 112, 50, 0);
+		@include adaptive-value("padding-bottom", 112, 40, 0);
 
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -335,7 +335,7 @@ body {
 		&::before {
 			// Размер равен размеру изображения (33.91% от родителя)
 			width: 33.91%;
-			height: 33.91%;   // предполагаем, что логотип квадратный
+			height: 33.91%; // предполагаем, что логотип квадратный
 			top: 21.76%;
 			left: 0;
 			background: url("../images/main/logo-primary.svg") center / 100% 100% no-repeat;
@@ -344,7 +344,7 @@ body {
 		&::after {
 			// Размер равен размеру изображения (18.38% от родителя)
 			width: 18.38%;
-			height: 18.38%;   // предполагаем, что точки квадратные
+			height: 18.38%; // предполагаем, что точки квадратные
 			// Пересчитали позицию: исходные left: -8% → right: 8%, top: -21.5% → bottom: 21.5%
 			right: 8%;
 			bottom: 21.5%;
@@ -384,11 +384,78 @@ body {
 }
 
 @keyframes rotate {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 @keyframes anti-rotate {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(-360deg); }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+// ============ who =============
+
+.who {
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+	@include adaptive-value("padding-bottom", 86, 40, 0);
+	gap: 1.25rem;
+
+	&__container {
+		text-align: end;
+		@include adaptive-value("font-size", 24, 18, 0);
+		color: var(--white);
+		position: relative;
+
+		&::before,
+		&::after {
+			content: "\e90d";
+			font-family: "icomoon";
+			position: absolute;
+
+			@include adaptive-value("font-size", 21, 14, 0);
+			color: var(--gray);
+
+			@include adaptive-value("padding-inline", 8, 2, 0);
+			@include adaptive-value("padding-block", 4, 2, 0);
+			background-color: var(--background);
+		}
+		&::before {
+			top: -11%;
+			left: 3.5%;
+			
+		}
+		&::after {
+			bottom: 31%;
+			right: 4.5%;
+		}
+	}
+
+	&__text {
+		font-weight: 500;
+		line-height: 1.2;
+		border: 1px solid var(--gray);
+		@include adaptive-value("padding", 32, 10, 0);
+	}
+
+	&__author {
+		display: inline-block;
+		border: 1px solid var(--gray);
+		@include adaptive-value("padding", 16, 10, 0);
+	}
+
+	&__cube {
+		@media (max-width: 47.9988rem){
+			display: none;
+		}
+	}
 }
