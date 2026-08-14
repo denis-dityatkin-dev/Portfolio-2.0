@@ -138,8 +138,11 @@ body {
 			left: 0;
 			background: url("../images/logo-white.svg") left no-repeat;
 		}
+		transition: color 0.5s;
+		&:hover{
+			color: var(--primary);
+		}
 	}
-
 	&__menu {
 		&-social {
 			display: flex;
@@ -205,6 +208,33 @@ body {
 		}
 		@media (max-width: 47.9988rem) {
 			font-size: 32px;
+		}
+
+		position: relative;
+		transition: color 0.5s;
+		&::after {
+			position: absolute;
+			content: "";
+			width: 0;
+			bottom: 0;
+			left: 50%;
+			height: 0.0313rem;
+			background-color: var(--primary);
+			transition: all 0.5s;
+		}
+		&:hover {
+			color: var(--white);
+			&::after {
+				left: 0;
+				width: 100%;
+			}
+		}
+		&--active {
+			color: var(--white);
+			&::after {
+				left: 0;
+				width: 100%;
+			}
 		}
 	}
 
@@ -294,12 +324,42 @@ body {
 
 .decor-main-section {
 	&__box {
+		position: relative;
+		// Убираем общие width/height – зададим каждому индивидуально
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			// По умолчанию transform-origin: center, вращение вокруг центра элемента
+		}
+		&::before {
+			// Размер равен размеру изображения (33.91% от родителя)
+			width: 33.91%;
+			height: 33.91%;   // предполагаем, что логотип квадратный
+			top: 21.76%;
+			left: 0;
+			background: url("../images/main/logo-primary.svg") center / 100% 100% no-repeat;
+			animation: rotate 70s infinite linear; // по часовой
+		}
+		&::after {
+			// Размер равен размеру изображения (18.38% от родителя)
+			width: 18.38%;
+			height: 18.38%;   // предполагаем, что точки квадратные
+			// Пересчитали позицию: исходные left: -8% → right: 8%, top: -21.5% → bottom: 21.5%
+			right: 8%;
+			bottom: 21.5%;
+			z-index: 2;
+			background: url("../images/main/dots.svg") center / 100% 100% no-repeat;
+			animation: anti-rotate 70s infinite linear; // против часовой
+		}
 	}
 
 	&__image {
 		display: grid;
 		align-items: center;
 		justify-content: center;
+		position: relative;
+		z-index: 2;
 	}
 
 	&__picture {
@@ -309,11 +369,10 @@ body {
 	&__subtitle {
 		border: 1px solid var(--gray);
 		padding: 0.5rem;
-
 		display: flex;
 		align-items: center;
 		font-weight: 500;
-		gap: .625rem;
+		gap: 0.625rem;
 		&::before {
 			color: var(--primary);
 		}
@@ -322,4 +381,14 @@ body {
 			font-weight: 600;
 		}
 	}
+}
+
+@keyframes rotate {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+@keyframes anti-rotate {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(-360deg); }
 }
