@@ -92,7 +92,7 @@ body {
 }
 .title {
 	font-weight: 500;
-	@include adaptive-value("font-size", 32, 24, 0);
+	@include adaptive-value("font-size", 32, 22, 0);
 	color: var(--white);
 	display: flex;
 	align-items: center;
@@ -101,7 +101,7 @@ body {
 	}
 	&::after{
 		content: "";
-		margin-left: 1rem;
+		@include adaptive-value("margin-left", 16, 10, 0);
 		height: .0625rem;
 		background-color: var(--primary);
 		width: 7.9375rem;
