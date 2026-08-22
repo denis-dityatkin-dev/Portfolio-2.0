@@ -104,6 +104,7 @@ body {
 		@include adaptive-value("margin-left", 16, 10, 0);
 		height: .0625rem;
 		background-color: var(--primary);
-		width: 7.9375rem;
+		width: 127px;
+		@include adaptive-value("font-size", 127, 20, 0);
 	}
 }

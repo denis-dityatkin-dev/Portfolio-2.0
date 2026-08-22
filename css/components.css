@@ -74,5 +74,6 @@ body {
   margin-left: calc(10px + 6 * ((100vw - 320px) / 1600));
   height: 0.0625rem;
   background-color: var(--primary);
-  width: 7.9375rem;
+  width: 127px;
+  font-size: calc(20px + 107 * ((100vw - 320px) / 1600));
 }
