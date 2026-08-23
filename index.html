@@ -13,7 +13,7 @@
 	<div class="wrapper">
 		<header id="navbar" class="header">
 					<div class="header__container">
-					<a href="#" class="header__logo">Denis</a>
+					<a data-goto=".wrapper" href="#" class="header__logo">Denis</a>
 					<div class="header__menu menu">
 							<nav id="menu" class="menu__body">
 								<ul class="menu__list">
@@ -62,27 +62,27 @@
 		</header>
 		<main class="main">
 			<section class="main-section --anim">
-				<div class="main-section__line"></div>
+				<div class="main-section__line anim--down"></div>
 				<div class="main-section__social social">
 					<div class="social__items">
-						<a href="https://github.com/denis-dityatkin-dev?tab=repositories" target="_blank" class="social__item icon-github"></a>
-						<a href="https://www.linkedin.com/in/denis-dityatkin-908346b7/" target="_blank" class="social__item icon-linkedin"></a>
-						<a href="tel:380990633215" target="_blank" class="social__item icon-telegram"></a>
+						<a href="https://github.com/denis-dityatkin-dev?tab=repositories" target="_blank" class="social__item icon-github anim--delay"></a>
+						<a href="https://www.linkedin.com/in/denis-dityatkin-908346b7/" target="_blank" class="social__item icon-linkedin anim--delay"></a>
+						<a href="tel:380990633215" target="_blank" class="social__item icon-telegram anim--delay"></a>
 					</div>
 				</div>
 				<div class="main-section__content-container">
 					<div class="main-section__content">
-						<h1 class="main-section__title">Denis is a <span>web designer</span> and <span>front-end developer</span></h1>
-						<div class="main-section__text">
+						<h1 class="main-section__title anim--down">Denis is a <span>web designer</span> and <span>front-end developer</span></h1>
+						<div class="main-section__text anim--right">
 							<p>He crafts responsive websites where technologies meet creativity</p>
 						</div>
-						<button class="button main-section__button button__live">Contact me!!</button>
+						<button class="button main-section__button button__live anim--zoom">Contact me!!</button>
 					</div>
 					<div class="main-section__decor decor-main-section">
 						<div class="decor-main-section__box">
 							<div class="decor-main-section__image">
-								<img class="decor-main-section__picture" src="./images/main-img.png" alt="Denis">
-								<h2 class="decor-main-section__subtitle icon-cube-primary">Currently working on <span>Portfolio</span></h2>
+								<img class="decor-main-section__picture anim--left" src="./images/main-img.png" alt="Denis">
+								<h2 class="decor-main-section__subtitle icon-cube-primary anim--up">Currently working on <span>Portfolio</span></h2>
 							</div>
 							
 						</div>
@@ -91,21 +91,21 @@
 			</section>
 			<section class="who --anim">
 				<div class="who__content">
-					<div class="who__text">
+					<div class="who__text anim--right">
 						<p>With great power comes great electricity bill</p>
 					</div>
-					<div class="who__author">- Dr. Who</div>
+					<div class="who__author anim--left">- Dr. Who</div>
 				</div>
 				<img src="./images/who/cube.svg" alt="who__cube " class="who__cube cube anim--rotate">
 			</section>
 			<section class="projects --anim">
 				<div class="projects__container">
 					<div class="projects__header">
-						<h2 class="projects__title title"><span>#</span>projects</h2>
-						<a href="works.html" class="projects__link">View all ~~></a>
+						<h2 class="projects__title title anim--right"><span>#</span>projects</h2>
+						<a href="works.html" class="projects__link anim--left">View all ~~></a>
 					</div>
 					<div class="projects__items">
-						<article class="projects__item item-projects">
+						<article class="projects__item item-projects anim--delay-up">
 							<a href="https://denis-dityatkin-dev.github.io/arct/" 
 									target="_blank" class="item-projects__image">
 								<img src="./images/projects/portfolio-19.jpg" alt="portfolio">
@@ -118,7 +118,7 @@
 								<a target="_blank" href="https://denis-dityatkin-dev.github.io/arct/" class="button item-projects__button button__live">Live <~></a>
 							</div>
 						</article>
-						<article class="projects__item item-projects">
+						<article class="projects__item item-projects anim--delay-up">
 							<a href="https://denis-dityatkin-dev.github.io/Arik/" 
 									target="_blank" class="item-projects__image">
 								<img src="./images/projects/portfolio-18.jpg" alt="portfolio">
@@ -131,7 +131,7 @@
 								<a target="_blank" href="https://denis-dityatkin-dev.github.io/Arik/" class="button item-projects__button button__live">Live <~></a>
 							</div>
 						</article>
-						<article class="projects__item item-projects">
+						<article class="projects__item item-projects anim--delay-up">
 							<a href="https://denis-dityatkin-dev.github.io/gronberg/" 
 									target="_blank" class="item-projects__image">
 								<img src="./images/projects/portfolio-17.jpg" alt="portfolio">
@@ -151,7 +151,7 @@
 			<section class="skills --anim">
 				<div class="skills__container">
 					<div class="skills__header">
-						<h2 class="skills__title title"><span>#</span>skills</h2>
+						<h2 class="skills__title title anim--right"><span>#</span>skills</h2>
 					</div>
 					<div class="skills__body">
 						<div class="skills__figures figure-skills">
@@ -171,7 +171,7 @@
 						</div>
 						<div class="skills__content content-skills">
 							<div class="content-skills__items item-skill">
-									<div class="item-skill__item">
+									<div class="item-skill__item anim--delay">
 										<h4 class="item-skill__item-title">Languages</h4>
 										<div class="item-skill__item-text">
 											<p>TypeScript</p>
@@ -179,21 +179,21 @@
 											<p>English A2</p>
 										</div>
 									</div>
-									<div class="item-skill__item">
+									<div class="item-skill__item anim--delay">
 										<h4 class="item-skill__item-title">Databases</h4>
 										<div class="item-skill__item-text">
 											<p>SQLite</p>
 											<p>PostgreSQL</p>
 										</div>
 									</div>
-									<div class="item-skill__item">
+									<div class="item-skill__item anim--delay">
 										<h4 class="item-skill__item-title">Other</h4>
 										<div class="item-skill__item-text">
 											<p>HTML CSS</p>
 											<p>SCSS</p>
 										</div>
 									</div>
-									<div class="item-skill__item">
+									<div class="item-skill__item anim--delay">
 										<h4 class="item-skill__item-title">Tools</h4>
 										<div class="item-skill__item-text">
 											<p>VSCode</p>
@@ -201,7 +201,7 @@
 											<p>Git</p>
 										</div>
 									</div>
-									<div class="item-skill__item">
+									<div class="item-skill__item anim--delay">
 										<h4 class="item-skill__item-title">Frameworks</h4>
 										<div class="item-skill__item-text">
 											<p>React</p>
@@ -216,21 +216,21 @@
 				<img src="./images/projects/cube.svg" alt="who__cube " class="about__cube cube anim--rotate-rev">
 				<div class="about__container">
 					<div class="about__header">
-						<h2 class="about__title title"><span>#</span>about-me</h2>
+						<h2 class="about__title title anim--right"><span>#</span>about-me</h2>
 					</div>
 					<div class="about__body">
 						<div class="about__content">
 							<div class="about__text">
-								<p>Hello, i’m Denis</p>
-								<p>I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences. </p>
-								<p>Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.</p>
+								<p class="anim--delay-up">Hello, i’m Denis</p>
+								<p class="anim--delay-up">I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences. </p>
+								<p class="anim--delay-up">Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks.</p>
 							</div>
-							<button class="button about__button button__live">Read more -></button>
+							<button class="button about__button button__live anim--zoom">Read more -></button>
 						</div>
 						<div class="about__decor decor-about">
 							<div class="decor-about__box">
 								<div class="decor-about__image">
-									<img class="decor-about__picture" src="./images/main-img-2.png" alt="Denis">
+									<img class="decor-about__picture anim--left" src="./images/main-img-2.png" alt="Denis">
 								</div>
 							</div>
 						</div>
@@ -242,13 +242,13 @@
 				<img src="./images/about/dots-1.svg" alt="dots" class="contacts__dots anim--rotate">
 				<div class="contacts__content-container">
 					<div class="contacts__header">
-						<h2 class="contacts__title title"><span>#</span>contacts</h2>
+						<h2 class="contacts__title title anim--right"><span>#</span>contacts</h2>
 					</div>
 					<div class="contacts__body ">
-						<div class="contacts__text">
+						<div class="contacts__text anim--up">
 							<p>I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me</p>
 						</div>
-						<div class="contacts__content action">
+						<div class="contacts__content action anim--left">
 							<div class="contacts__title">Message me here</div>
 							<div class="contacts__items">
 								<a href="mailto:den04101990@gmail.com" target="_blank" class="contacts__item icon-email">den04101990@gmail.com</a>
@@ -264,25 +264,25 @@
 				<div class="footer__body body-footer">
 					<div class="body-footer__content">
 						<div class="body-footer__title">
-							<a href="#" data-goto=".wrapper" class=" body-footer__logo header__logo">Denis</a>
-							<a href="mailto:den04101990@gmail.com" target="_blank" class="body-footer__mail">den04101990@gmail.com</a>
+							<a href="#" data-goto=".wrapper" class=" body-footer__logo header__logo anim--right">Denis</a>
+							<a href="mailto:den04101990@gmail.com" target="_blank" class="body-footer__mail anim--left">den04101990@gmail.com</a>
 						</div>
-						<div class="body-footer__text">
+						<div class="body-footer__text anim--up">
 							<p>Web designer and front-end developer</p>
 						</div>
 					</div>
 					<div class="body-footer__media media-footer">
-						<div class="media-footer__title">Media</div>
+						<div class="media-footer__title anim--left">Media</div>
 						<div class="media-footer__social social-footer">
 							<div class="social-footer__items">
-								<a href="https://github.com/denis-dityatkin-dev?tab=repositories" target="_blank" class="social-footer__item social__item icon-github"></a>
-								<a href="https://www.linkedin.com/in/denis-dityatkin-908346b7/" target="_blank" class="social-footer__item social__item icon-linkedin"></a>
-								<a href="tel:380990633215" target="_blank" class="social-footer__item social__item icon-telegram"></a>
+								<a href="https://github.com/denis-dityatkin-dev?tab=repositories" target="_blank" class="social-footer__item social__item icon-github anim--delay"></a>
+								<a href="https://www.linkedin.com/in/denis-dityatkin-908346b7/" target="_blank" class="social-footer__item social__item icon-linkedin anim--delay"></a>
+								<a href="tel:380990633215" target="_blank" class="social-footer__item social__item icon-telegram anim--delay"></a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="footer__copy">© Copyright 2026. Made by Denis</div>
+				<div class="footer__copy anim--up">© Copyright 2026. Made by Denis</div>
 			</div>
 		</footer>
 	</div>
