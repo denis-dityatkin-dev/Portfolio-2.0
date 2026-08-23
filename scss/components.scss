@@ -108,3 +108,24 @@ body {
 		@include adaptive-value("font-size", 127, 20, 0);
 	}
 }
+.header {
+
+	&__title {
+	}
+}
+.title {
+}
+.title-big {
+	@include adaptive-value("font-size", 32, 22, 0);
+	font-weight: 600;
+	color: var(--white);
+	span {
+		color: var(--primary);
+	}
+	&:not(:last-child){
+		margin-bottom: .875rem;
+	}
+}
+.sub-title {
+	color: var(--white);
+}

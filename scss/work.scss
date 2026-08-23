@@ -1,0 +1,101 @@
+// Подключение шрифтов только в самом верху
+@import url("https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700&display=swap");
+// @import url("../css/fonts.css");
+@import "../css/components.css";
+@import "../css/components/anim.css";
+@import "../css/icons-fonts.css";
+@import "../scss/components/burger.css";
+@import "../scss/main.css";
+// @import "../scss/components/ibj.scss";
+// $maxWidth: 1024;
+// @include adaptive-font(40, 24);(Использовать для адаптивного шрифта: 1 - мах знач, 2 - мин знач.)
+@import "../scss/adaptive-value.scss";
+// @include adaptive-value("padding", 40, 24, 0);(Использовать для адаптивного шрифта: 1 - мах знач, 2 - мин знач., 3 - режим)
+$maxWidth: 1920;
+$maxWidthContainer: 1054;
+
+:root {
+	--font-family: "Fira Code", sans-serif;
+	--primary: #c778dd;
+	--gray: #abb2bf;
+	--background: #282c33;
+	--white: #fff;
+}
+// color: var(--text-default);
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: clip; // работает с position: sticky;
+	// min-width: 320px;
+	// max-width: 1920px;
+	//block-size: 100%;
+}
+// ==== Чтоб прибить футер к низу разрешаем main расширяться
+
+.wrapper > main {
+	flex-grow: 1;
+}
+.work {
+	@include adaptive-value("padding-top", 114, 100, 0);
+	@include adaptive-value("padding-bottom", 187, 40, 0);
+	&__section {
+		display: flex;
+		gap: 1.25rem;
+	}
+
+	&__section-panel {
+		display: flex;
+		align-items: flex-start;
+		@media (max-width: 47.9988rem) {
+			display: none;
+		}
+	}
+
+	&__section-line {
+	}
+
+	&__section-social {
+		padding-left: 1.0625rem;
+		margin-top: 7.8125rem;
+	}
+
+	&__section-content {
+	}
+}
+
+.content-section {
+	display: flex;
+	justify-content: space-between;
+	gap: 1.25rem;
+	&__dots {
+		position: relative;
+		left: -3.25rem;
+		@media (max-width: 61.9988rem) {
+			display: none;
+		}
+	}
+
+	&__container {
+	}
+
+	&__header {
+		@include adaptive-value("margin-bottom", 68, 30, 0);
+	}
+	&__title {
+		@include adaptive-value("margin-bottom", 48, 20, 0);
+		&::after{
+			display: none;
+		}
+	}
+	&__portfolio {
+	}
+
+	&__cube {
+		position: relative;
+		right: -6.25rem;
+		@media (max-width: 61.9988rem) {
+			display: none;
+		}
+	}
+}

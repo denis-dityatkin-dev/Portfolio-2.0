@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700&display=swap");
+@import "../css/components.css";
+@import "../css/components/anim.css";
+@import "../css/icons-fonts.css";
+@import "../scss/components/burger.css";
+@import "../scss/main.css";
+:root {
+  --font-family: "Fira Code", sans-serif;
+  --primary: #c778dd;
+  --gray: #abb2bf;
+  --background: #282c33;
+  --white: #fff;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: clip;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+.work {
+  padding-top: calc(100px + 14 * ((100vw - 320px) / 1600));
+  padding-bottom: calc(40px + 147 * ((100vw - 320px) / 1600));
+}
+.work__section {
+  display: flex;
+  gap: 1.25rem;
+}
+.work__section-panel {
+  display: flex;
+  align-items: flex-start;
+}
+@media (max-width: 47.9988rem) {
+  .work__section-panel {
+    display: none;
+  }
+}
+.work__section-social {
+  padding-left: 1.0625rem;
+  margin-top: 7.8125rem;
+}
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+.content-section__dots {
+  position: relative;
+  left: -3.25rem;
+}
+@media (max-width: 61.9988rem) {
+  .content-section__dots {
+    display: none;
+  }
+}
+.content-section__header {
+  margin-bottom: calc(30px + 38 * ((100vw - 320px) / 1600));
+}
+.content-section__title {
+  margin-bottom: calc(20px + 28 * ((100vw - 320px) / 1600));
+}
+.content-section__title::after {
+  display: none;
+}
+.content-section__cube {
+  position: relative;
+  right: -6.25rem;
+}
+@media (max-width: 61.9988rem) {
+  .content-section__cube {
+    display: none;
+  }
+}

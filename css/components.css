@@ -77,3 +77,19 @@ body {
   width: 127px;
   font-size: calc(20px + 107 * ((100vw - 320px) / 1600));
 }
+
+.title-big {
+  font-size: calc(22px + 10 * ((100vw - 320px) / 1600));
+  font-weight: 600;
+  color: var(--white);
+}
+.title-big span {
+  color: var(--primary);
+}
+.title-big:not(:last-child) {
+  margin-bottom: 0.875rem;
+}
+
+.sub-title {
+  color: var(--white);
+}

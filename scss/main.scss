@@ -5,6 +5,7 @@
 @import "../css/components/anim.css";
 @import "../css/icons-fonts.css";
 @import "../scss/components/burger.css";
+@import "../scss/work.css";
 // @import "../scss/components/ibj.scss";
 // $maxWidth: 1024;
 // @include adaptive-font(40, 24);(Использовать для адаптивного шрифта: 1 - мах знач, 2 - мин знач.)
@@ -87,6 +88,19 @@ body {
 }
 
 .cube {
+	@media (max-width: 47.9988rem) {
+		display: none;
+	}
+}
+.social-line {
+	position: absolute;
+	top: 0;
+	left: 2.0625rem; // или calc(1.0625rem + 1rem)
+	width: 0.0625rem;
+	height: 50%;
+	background-color: var(--gray);
+	pointer-events: none;
+	z-index: 1;
 	@media (max-width: 47.9988rem) {
 		display: none;
 	}
@@ -229,7 +243,7 @@ body {
 				width: 100%;
 			}
 		}
-		&-active{
+		&-active {
 			color: var(--white);
 		}
 	}
@@ -258,17 +272,6 @@ body {
 	}
 
 	&__line {
-		position: absolute;
-		top: 0;
-		left: 2.0625rem; // или calc(1.0625rem + 1rem)
-		width: 0.0625rem;
-		height: 50%;
-		background-color: var(--gray);
-		pointer-events: none;
-		z-index: 1;
-		@media (max-width: 47.9988rem) {
-			display: none;
-		}
 	}
 	&__content-container {
 		@include adaptive-value("padding-top", 123, 80, 0);
@@ -921,7 +924,7 @@ body {
 		gap: 0.3125rem;
 		transition: color 0.5s;
 		z-index: 5;
-		&:hover{
+		&:hover {
 			color: var(--white);
 		}
 	}
@@ -998,7 +1001,7 @@ body {
 
 	&__mail {
 		transition: color 0.5s;
-		&:hover{
+		&:hover {
 			color: var(--white);
 		}
 	}
@@ -1024,7 +1027,6 @@ body {
 }
 
 .social-footer {
-
 	&__items {
 		display: flex;
 		align-items: center;
