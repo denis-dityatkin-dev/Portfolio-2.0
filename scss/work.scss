@@ -58,6 +58,8 @@ $maxWidthContainer: 1054;
 	&__section-social {
 		padding-left: 1.0625rem;
 		margin-top: 7.8125rem;
+		position: relative;
+		z-index: 2;
 	}
 
 	&__section-content {
