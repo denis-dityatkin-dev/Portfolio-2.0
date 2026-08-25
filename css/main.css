@@ -4,6 +4,7 @@
 @import "../css/icons-fonts.css";
 @import "../scss/components/burger.css";
 @import "../scss/work.css";
+@import "../scss/about.css";
 :root {
   --font-family: "Fira Code", sans-serif;
   --primary: #c778dd;
@@ -664,6 +665,9 @@ body {
 }
 .about__text:not(:last-child) {
   margin-bottom: calc(20px + 7 * ((100vw - 320px) / 1600));
+}
+.about__button {
+  display: inline-block;
 }
 .about__dots {
   margin-right: -1.5625rem;

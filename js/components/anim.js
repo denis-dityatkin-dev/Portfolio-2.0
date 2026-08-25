@@ -16,7 +16,7 @@ const options = {
 	// При появі якого спрацьовує подія
 	// Де 0 це будь яка поява
 	// 1 це повна поява об'кта в в'юпорті
-	threshold: 0.2,
+	threshold: 0,
 }
 const callback = (entries, observer) => {
 	entries.forEach(entry => {

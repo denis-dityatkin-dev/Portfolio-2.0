@@ -5,7 +5,8 @@
 @import "../css/components/anim.css";
 @import "../css/icons-fonts.css";
 @import "../scss/components/burger.css";
-@import "../scss/main.css";
+@import "../scss/work.css";
+@import "../scss/about.css";
 // @import "../scss/components/ibj.scss";
 // $maxWidth: 1024;
 // @include adaptive-font(40, 24);(Использовать для адаптивного шрифта: 1 - мах знач, 2 - мин знач.)
@@ -31,75 +32,27 @@ $maxWidthContainer: 1054;
 	// max-width: 1920px;
 	//block-size: 100%;
 }
-// ==== Чтоб прибить футер к низу разрешаем main расширяться
 
-.wrapper > main {
-	flex-grow: 1;
-}
+@import "../scss/main.css";
 
-// ===========
-.work {
-	@include adaptive-value("padding-top", 114, 100, 0);
-	@include adaptive-value("padding-bottom", 187, 40, 0);
+.about-me {
+	
 	&__section {
-		display: flex;
-		gap: 1.25rem;
+		@include adaptive-value("padding-top", 114, 100, 0);
+		@include adaptive-value("padding-bottom", 75, 20, 0);
 	}
-
-	&__section-panel {
-		display: flex;
-		align-items: flex-start;
-		@media (max-width: 47.9988rem) {
-			display: none;
-		}
+	&__container{
+	
 	}
-
-	&__section-line {
-	}
-
-	&__section-social {
-		padding-left: 1.0625rem;
-		margin-top: 7.8125rem;
-		position: relative;
-		z-index: 2;
-	}
-
-	&__section-content {
-	}
-}
-
-.content-section {
-	display: flex;
-	justify-content: space-between;
-	gap: 1.25rem;
-	&__dots {
-		position: relative;
-		left: -3.25rem;
-		@media (max-width: 61.9988rem) {
-			display: none;
-		}
-	}
-
-	&__container {
+	&__panel {
 	}
 
 	&__header {
-		@include adaptive-value("margin-bottom", 68, 30, 0);
 	}
-	&__title {
-		@include adaptive-value("margin-bottom", 48, 20, 0);
-		&::after{
-			display: none;
-		}
-	}
-	&__portfolio {
+
+	&__dots {
 	}
 
 	&__cube {
-		position: relative;
-		right: -6.25rem;
-		@media (max-width: 61.9988rem) {
-			display: none;
-		}
 	}
 }

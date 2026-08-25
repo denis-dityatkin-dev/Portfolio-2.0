@@ -6,6 +6,7 @@
 @import "../css/icons-fonts.css";
 @import "../scss/components/burger.css";
 @import "../scss/work.css";
+@import "../scss/about.css";
 // @import "../scss/components/ibj.scss";
 // $maxWidth: 1024;
 // @include adaptive-font(40, 24);(Использовать для адаптивного шрифта: 1 - мах знач, 2 - мин знач.)
@@ -798,6 +799,7 @@ body {
 	}
 
 	&__button {
+		display: inline-block;
 	}
 
 	&__decor {
