@@ -219,21 +219,6 @@ $maxWidthContainer: 1054;
     padding: 0 15px;
 		@include adaptive-value("padding-left", 80, 15, 0);
 		@include adaptive-value("padding-right", 80, 15, 0);
-    // // Отступы для защиты от дотса (слева) и куба (справа)
-    // padding-left: 80px;   // дотс ~50px + зазор
-    // padding-right: 80px;  // куб ~75px + зазор
-
-    // // На планшетах уменьшаем отступы, но оставляем запас
-    // @media (max-width: 1199.98px) {
-    //   padding-left: 60px;
-    //   padding-right: 60px;
-    // }
-
-    // // На мобильных, когда декорации скрыты, убираем лишнее
-    // @media (max-width: 991.98px) {
-    //   padding-left: 15px;
-    //   padding-right: 15px;
-    // }
   }
 
   // Декорации – абсолютно, вне контейнера
