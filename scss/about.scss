@@ -22,7 +22,13 @@ $maxWidthContainer: 1054;
 	--background: #282c33;
 	--white: #fff;
 }
-// color: var(--text-default);
+
+[class*="__container"] {
+	max-inline-size: 65.875rem;
+	margin-inline: auto;
+	padding-inline: 0.9375rem;
+}
+
 .wrapper {
 	min-height: 100%;
 	display: flex;
@@ -35,24 +41,213 @@ $maxWidthContainer: 1054;
 
 @import "../scss/main.css";
 
+// .about-me {
+	
+// 	@include adaptive-value("padding-bottom", 75, 20, 0);
+// 	&__section {
+// 		display: flex;
+// 		gap: 20px;
+// 	}
+
+// 	&__panel {
+// 		position: relative;
+// 		@media (max-width: 61.9988rem) {
+// 			display: none;
+// 		}
+// 	}
+// 	&__wrapper {
+// 		flex-grow: 1;
+// 		display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;   // прижимает всё содержимое влево
+//     width: 100%;  
+// 	}
+// 	&__content {
+// 		text-align: left !important;
+// 		@include adaptive-value("padding-bottom", 40, 20, 0);
+// 	}
+// 	&__header {
+// 		text-align: left !important;
+// 		@include adaptive-value("padding-top", 114, 80, 0);
+// 		@media (min-width: 61.9988rem) {
+// 			// margin-inline: -20px;
+// 		}
+		
+
+// 	}
+// &__content{
+// 	// @include adaptive-value("padding-top", 75, 20, 0);
+
+// }
+// 	&__dots {
+
+// 	}
+
+// 	&__cube {
+// 		margin-right: -4.6875rem;
+
+// 	}
+// }
+
+// ==== about-me (первая секция) ====
+// .about-me {
+//   &__section {
+//     position: relative;
+//   }
+
+//   &__panel {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     width: 120px;
+//     z-index: 2;
+//     @media (max-width: 61.9988rem) {
+//       display: none;
+//     }
+//   }
+
+//   &__container {
+//     @include adaptive-value("padding-left", 140, 15, 0);
+//     // padding-right оставляем от глобального контейнера, но можно и явно
+//   }
+
+//   &__header {
+//     text-align: left;
+//     @include adaptive-value("padding-top", 114, 80, 0);
+//   }
+
+//   &__content {
+//     text-align: left;
+//     @include adaptive-value("padding-bottom", 40, 20, 0);
+//   }
+
+//   &__cube {
+//     position: absolute;
+//     right: -75px;
+//     bottom: 10%;
+//     margin-right: 0; // убираем отрицательный margin
+//   }
+// }
+
+// // ==== about (вторая секция) ====
+// .about {
+//   position: relative;
+
+//   &__container {
+//     @include adaptive-value("padding-left", 70, 15, 0);
+//     @include adaptive-value("padding-right", 70, 15, 0);
+//   }
+
+//   &__dots {
+//     position: absolute;
+//     left: -50px;
+//     top: 20%;
+//     // остальные стили
+//   }
+
+//   &__cube {
+//     position: absolute;
+//     right: -75px;
+//     bottom: 10%;
+//     // остальные стили
+//   }
+// }
+
+// ==========================================
+//  Секция about-me (первая)
+// ==========================================
 .about-me {
-	
-	&__section {
-		@include adaptive-value("padding-top", 114, 100, 0);
-		@include adaptive-value("padding-bottom", 75, 20, 0);
-	}
-	&__container{
-	
-	}
-	&__panel {
-	}
+  &__section {
+    position: relative; // контекст для абсолютной панели
+  }
 
-	&__header {
-	}
+  // Боковая панель – абсолютно слева
+  &__panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120px; // реальная ширина панели
+    z-index: 2;
+    @media (max-width: 991.98px) {
+      display: none; // на мобильных скрываем
+    }
+  }
 
-	&__dots {
-	}
+  // Контейнер с контентом – ограничен и имеет левый отступ
+  &__container {
+    max-inline-size: 65.875rem;
+    margin-inline: auto;
+    padding: 0 15px; // базовые отступы (как у глобального контейнера)
+    // Дополнительный левый отступ для защиты от панели
+    padding-left: 160px; // 120px (панель) + 40px зазор
 
-	&__cube {
-	}
+    // Когда панель скрыта – убираем лишний отступ
+    @media (max-width: 991.98px) {
+      padding-left: 15px;
+    }
+  }
+
+  &__header {
+    text-align: left;
+    padding-top: 114px; // или через adaptive-value, если нужно плавно
+    @media (max-width: 767.98px) {
+      padding-top: 80px;
+    }
+  }
+
+  &__content {
+    text-align: left;
+    padding-bottom: 40px;
+    @media (max-width: 767.98px) {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+// ==========================================
+//  Секция about (вторая)
+// ==========================================
+.about {
+  position: relative; // контекст для декораций
+
+  &__container {
+    max-inline-size: 65.875rem;
+    margin-inline: auto;
+    padding: 0 15px;
+
+    // Отступы для защиты от дотса (слева) и куба (справа)
+    padding-left: 80px;   // дотс ~50px + зазор
+    padding-right: 80px;  // куб ~75px + зазор
+
+    // На планшетах уменьшаем отступы, но оставляем запас
+    @media (max-width: 1199.98px) {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
+    // На мобильных, когда декорации скрыты, убираем лишнее
+    @media (max-width: 991.98px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  // Декорации – абсолютно, вне контейнера
+  &__dots {
+    position: absolute;
+    left: -50px;
+    top: 20%;
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+  }
+
+  &__cube {
+    position: absolute;
+    right: -75px;
+    bottom: 10%;
+    @media (max-width: 991.98px) {
+      display: none;
+    }
+  }
 }

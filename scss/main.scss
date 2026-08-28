@@ -692,7 +692,7 @@ body {
 
 		@include three-col-layout; // базовое состояние
 
-		@media (max-width: 991.98px) {
+		@media (max-width: 61.9988rem) {
 			grid-template-columns: repeat(2, 1fr);
 			.item-skill__item {
 				grid-row: auto;
