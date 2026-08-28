@@ -160,15 +160,23 @@ $maxWidthContainer: 1054;
   &__section {
     position: relative; // контекст для абсолютной панели
   }
+&__padding{
+	@media (max-width: 1200.98px) {
+		padding-left: 80px;
+	}
+	@media (max-width: 991.98px) {
+		padding-left: 0px;
+	}
 
+}
   // Боковая панель – абсолютно слева
   &__panel {
     position: absolute;
     left: 0;
     top: 0;
-    width: 120px; // реальная ширина панели
+    // width: 100px; // реальная ширина панели
     z-index: 2;
-    @media (max-width: 991.98px) {
+    @media (max-width: 61.9988rem) {
       display: none; // на мобильных скрываем
     }
   }
@@ -178,29 +186,24 @@ $maxWidthContainer: 1054;
     max-inline-size: 65.875rem;
     margin-inline: auto;
     padding: 0 15px; // базовые отступы (как у глобального контейнера)
-    // Дополнительный левый отступ для защиты от панели
-    padding-left: 160px; // 120px (панель) + 40px зазор
 
-    // Когда панель скрыта – убираем лишний отступ
-    @media (max-width: 991.98px) {
-      padding-left: 15px;
-    }
   }
 
   &__header {
     text-align: left;
-    padding-top: 114px; // или через adaptive-value, если нужно плавно
-    @media (max-width: 767.98px) {
-      padding-top: 80px;
-    }
+		@include adaptive-value("padding-top", 114, 80, 0);
+
+		@media (max-width: 1200.98px) {
+			padding-left: 80px;
+		}
+		@media (max-width: 991.98px) {
+			padding-left: 0px;
+		}
   }
 
   &__content {
     text-align: left;
-    padding-bottom: 40px;
-    @media (max-width: 767.98px) {
-      padding-bottom: 20px;
-    }
+		@include adaptive-value("padding-bottom", 40, 20, 0);
   }
 }
 
@@ -214,22 +217,23 @@ $maxWidthContainer: 1054;
     max-inline-size: 65.875rem;
     margin-inline: auto;
     padding: 0 15px;
+		@include adaptive-value("padding-left", 80, 15, 0);
+		@include adaptive-value("padding-right", 80, 15, 0);
+    // // Отступы для защиты от дотса (слева) и куба (справа)
+    // padding-left: 80px;   // дотс ~50px + зазор
+    // padding-right: 80px;  // куб ~75px + зазор
 
-    // Отступы для защиты от дотса (слева) и куба (справа)
-    padding-left: 80px;   // дотс ~50px + зазор
-    padding-right: 80px;  // куб ~75px + зазор
+    // // На планшетах уменьшаем отступы, но оставляем запас
+    // @media (max-width: 1199.98px) {
+    //   padding-left: 60px;
+    //   padding-right: 60px;
+    // }
 
-    // На планшетах уменьшаем отступы, но оставляем запас
-    @media (max-width: 1199.98px) {
-      padding-left: 60px;
-      padding-right: 60px;
-    }
-
-    // На мобильных, когда декорации скрыты, убираем лишнее
-    @media (max-width: 991.98px) {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+    // // На мобильных, когда декорации скрыты, убираем лишнее
+    // @media (max-width: 991.98px) {
+    //   padding-left: 15px;
+    //   padding-right: 15px;
+    // }
   }
 
   // Декорации – абсолютно, вне контейнера
@@ -245,7 +249,7 @@ $maxWidthContainer: 1054;
   &__cube {
     position: absolute;
     right: -75px;
-    bottom: 10%;
+    top: 10%;
     @media (max-width: 991.98px) {
       display: none;
     }
