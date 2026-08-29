@@ -43,40 +43,38 @@ $maxWidthContainer: 1054;
 
 // ==========================================
 .about-me {
-  &__section {
-    position: relative; // контекст для абсолютной панели
-  }
-&__padding{
-	@media (max-width: 1200.98px) {
-		padding-left: 80px;
+	&__section {
+		position: relative; // контекст для абсолютной панели
 	}
-	@media (max-width: 991.98px) {
-		padding-left: 0px;
+	&__padding {
+		@media (max-width: 1200.98px) {
+			padding-left: 80px;
+		}
+		@media (max-width: 991.98px) {
+			padding-left: 0px;
+		}
+	}
+	// Боковая панель – абсолютно слева
+	&__panel {
+		position: absolute;
+		left: 0;
+		top: 0;
+		// width: 100px; // реальная ширина панели
+		z-index: 2;
+		@media (max-width: 61.9988rem) {
+			display: none; // на мобильных скрываем
+		}
 	}
 
-}
-  // Боковая панель – абсолютно слева
-  &__panel {
-    position: absolute;
-    left: 0;
-    top: 0;
-    // width: 100px; // реальная ширина панели
-    z-index: 2;
-    @media (max-width: 61.9988rem) {
-      display: none; // на мобильных скрываем
-    }
-  }
+	// Контейнер с контентом – ограничен и имеет левый отступ
+	&__container {
+		max-inline-size: 65.875rem;
+		margin-inline: auto;
+		padding: 0 15px; // базовые отступы (как у глобального контейнера)
+	}
 
-  // Контейнер с контентом – ограничен и имеет левый отступ
-  &__container {
-    max-inline-size: 65.875rem;
-    margin-inline: auto;
-    padding: 0 15px; // базовые отступы (как у глобального контейнера)
-
-  }
-
-  &__header {
-    text-align: left;
+	&__header {
+		text-align: left;
 		@include adaptive-value("padding-top", 114, 80, 0);
 
 		@media (max-width: 1200.98px) {
@@ -85,44 +83,93 @@ $maxWidthContainer: 1054;
 		@media (max-width: 991.98px) {
 			padding-left: 0px;
 		}
-  }
+	}
 
-  &__content {
-    text-align: left;
+	&__content {
+		text-align: left;
 		@include adaptive-value("padding-bottom", 40, 20, 0);
-  }
+	}
 }
 
 // ==========================================
 //  Секция about (вторая)
 // ==========================================
 .about {
-  position: relative; // контекст для декораций
+	position: relative; // контекст для декораций
 
-  &__container {
-    max-inline-size: 65.875rem;
-    margin-inline: auto;
-    padding: 0 15px;
+	&__container {
+		max-inline-size: 65.875rem;
+		margin-inline: auto;
+		padding: 0 15px;
 		@include adaptive-value("padding-left", 80, 15, 0);
 		@include adaptive-value("padding-right", 80, 15, 0);
-  }
+	}
 
-  // Декорации – абсолютно, вне контейнера
-  &__dots {
-    position: absolute;
-    left: -50px;
-    top: 20%;
-    @media (max-width: 991.98px) {
-      display: none;
-    }
-  }
+	// Декорации – абсолютно, вне контейнера
+	&__dots {
+		position: absolute;
+		left: -3.125rem;
+		top: 20%;
+		@media (max-width: 61.9988rem) {
+			display: none;
+		}
+	}
 
-  &__cube {
-    position: absolute;
-    right: -75px;
-    top: 10%;
-    @media (max-width: 991.98px) {
-      display: none;
-    }
-  }
+	&__cube {
+		position: absolute;
+		right: -4.6875rem;
+		top: 10%;
+		@media (max-width: 61.9988rem) {
+			display: none;
+		}
+	}
+}
+
+// ===========
+
+.skills-section {
+	@include adaptive-value("padding-bottom", 83, 30, 0);
+	display: flex;
+	align-items: start;
+	justify-content: start;
+	&__container {
+		flex-grow: 1;
+
+	}
+
+	&__header {
+		@include adaptive-value("margin-bottom", 48, 20, 0);
+		h2 {
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	&__body {
+		@media (min-width: 61.9988rem) {
+			padding-right: 115px;
+		}
+	}
+
+	&__content {
+	}
+	&__dots {
+		top: 0;
+		margin-right: -3.1875rem;
+		@media (max-width: 61.9988rem) {
+			display: none;
+		}
+	}
+}
+
+.content-skills-section {
+	&__items {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		@media (max-width: 61.9988rem) {
+			justify-content: center;
+		}
+	}
 }
