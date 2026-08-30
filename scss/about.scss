@@ -131,13 +131,16 @@ $maxWidthContainer: 1054;
 	@include adaptive-value("padding-bottom", 83, 30, 0);
 	display: flex;
 	align-items: start;
-	justify-content: start;
 	&__container {
-		flex-grow: 1;
-
+		@media (min-width: 61.9988rem) {
+			flex-grow: 1;
+		}
 	}
 
 	&__header {
+		@media (min-width: 61.9988rem) {
+			margin-left: 1.875rem;
+		}
 		@include adaptive-value("margin-bottom", 48, 20, 0);
 		h2 {
 			&::after {
@@ -148,7 +151,7 @@ $maxWidthContainer: 1054;
 
 	&__body {
 		@media (min-width: 61.9988rem) {
-			padding-right: 115px;
+			margin-left: 1.875rem;
 		}
 	}
 

@@ -110,20 +110,26 @@
   padding-bottom: calc(30px + 53 * ((100vw - 320px) / 1600));
   display: flex;
   align-items: start;
-  justify-content: start;
 }
-.skills-section__container {
-  flex-grow: 1;
+@media (min-width: 61.9988rem) {
+  .skills-section__container {
+    flex-grow: 1;
+  }
 }
 .skills-section__header {
   margin-bottom: calc(20px + 28 * ((100vw - 320px) / 1600));
+}
+@media (min-width: 61.9988rem) {
+  .skills-section__header {
+    margin-left: 1.875rem;
+  }
 }
 .skills-section__header h2::after {
   display: none;
 }
 @media (min-width: 61.9988rem) {
   .skills-section__body {
-    padding-right: 115px;
+    margin-left: 1.875rem;
   }
 }
 .skills-section__dots {
