@@ -50,7 +50,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: 100;
 }
 @media (max-width: 61.9988rem) {
   .about-me__panel {
@@ -153,6 +153,12 @@
 .facts__container {
   flex-grow: 1;
 }
+@media (max-width: 61.9988rem) {
+  .facts__header {
+    display: flex;
+    justify-content: center;
+  }
+}
 .facts__header:not(:last-child) {
   margin-bottom: calc(20px + 6 * ((100vw - 320px) / 1600));
 }
@@ -192,17 +198,33 @@
   }
 }
 .content-fact__items {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+  align-content: flex-start;
+}
+@media (max-width: 61.9988rem) {
+  .content-fact__items {
+    display: flex;
+    justify-content: center;
+  }
 }
 @media (max-width: 29.9988rem) {
   .content-fact__items {
+    display: grid;
     grid-template-columns: auto;
+    gap: 1rem;
   }
 }
 .content-fact__item {
   border: 0.0625rem solid var(--gray);
   padding: 0.5rem;
-  display: block;
+  margin: 0;
+}
+@media (min-width: 29.9988rem) {
+  .content-fact__item {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }

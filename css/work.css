@@ -34,6 +34,10 @@
 .work__section-panel {
   display: flex;
   align-items: flex-start;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
 }
 @media (max-width: 47.9988rem) {
   .work__section-panel {

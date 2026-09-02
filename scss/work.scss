@@ -49,12 +49,19 @@ $maxWidthContainer: 1054;
 	&__section-panel {
 		display: flex;
 		align-items: flex-start;
+		position: absolute;
+		left: 0;
+		top: 0;
+		// width: 100px; // реальная ширина панели
+		z-index: 100;
+
 		@media (max-width: 47.9988rem) {
 			display: none;
 		}
 	}
 
 	&__section-line {
+		
 	}
 
 	&__section-social {

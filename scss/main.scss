@@ -94,6 +94,8 @@ body {
 	}
 }
 .social-line {
+	display: flex;
+		align-items: flex-start;
 	position: absolute;
 	top: 0;
 	left: 2.0625rem; // или calc(1.0625rem + 1rem)

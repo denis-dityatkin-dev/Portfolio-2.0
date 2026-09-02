@@ -67,7 +67,7 @@ $maxWidthContainer: 1054;
 		left: 0;
 		top: 0;
 		// width: 100px; // реальная ширина панели
-		z-index: 2;
+		z-index: 100;
 		@media (max-width: 61.9988rem) {
 			display: none; // на мобильных скрываем
 		}
@@ -181,13 +181,19 @@ $maxWidthContainer: 1054;
 	display: flex;
 	justify-content: space-between;
 	gap: 1.25rem;
+	
 
 	@include adaptive-value("padding-bottom", 162, 30, 0);
 	&__container {
 		flex-grow: 1;
+		
 	}
 
 	&__header {
+		@media (max-width: 61.9988rem){
+			display: flex;
+			justify-content: center;
+		}
 		&:not(:last-child) {
 			@include adaptive-value("margin-bottom", 26, 20, 0);
 		}
@@ -240,19 +246,57 @@ $maxWidthContainer: 1054;
 	&__item {
 	}
 }
-.content-fact {
-	&__items {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1rem;
-		@media (max-width: 29.9988rem) {
-			grid-template-columns: auto;
-		}
-	}
+// .content-fact {
+//   &__items {
+//     display: flex;
+// 		align-items: center;
+//     flex-wrap: wrap;          // перенос на новую строку
+//     gap: 1rem;                // отступы между элементами (и по горизонтали, и по вертикали)
+//     // если нужна поддержка старых браузеров, можно использовать margin, но gap уже везде поддерживается
 
-	&__item {
-		border: 0.0625rem solid var(--gray);
-		padding: 0.5rem;
-		display: block;
-	}
+//     // На мобилках можно оставить flex-wrap, тогда элементы будут сами переноситься.
+//     // Если хотите, чтобы на мобилках они шли строго в столбик, раскомментируйте:
+//     @media (max-width: 29.9988rem) {
+//      display: grid;
+// 		 grid-template-columns: auto;
+//     }
+//   }
+
+//   &__item {
+//     border: 0.0625rem solid var(--gray);
+//     padding: 0.5rem;
+//         // бордер по тексту + паддинг
+// 		@media (min-width: 29.9988rem){
+// 			width: fit-content;  
+// 		}
+//     // display: inline-block;  // альтернатива, если width не работает
+//   }
+// }
+.content-fact {
+	
+  &__items {
+		@media (max-width: 61.9988rem){
+			display: flex;
+			justify-content: center;
+		}
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;              
+    align-content: flex-start;  
+
+    @media (max-width: 29.9988rem) {
+      display: grid;
+      grid-template-columns: auto;
+      gap: 1rem;             // и здесь тоже можно оставить 1rem
+    }
+  }
+
+  &__item {
+    border: 0.0625rem solid var(--gray);
+    padding: 0.5rem;
+    margin: 0;               // на всякий случай сбрасываем возможные margin
+    @media (min-width: 29.9988rem) {
+      width: fit-content;
+    }
+  }
 }
