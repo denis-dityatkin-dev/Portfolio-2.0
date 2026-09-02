@@ -76,6 +76,7 @@
 .content-section__cube {
   position: relative;
   right: -6.25rem;
+  margin-top: 8.75rem;
 }
 @media (max-width: 61.9988rem) {
   .content-section__cube {

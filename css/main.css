@@ -5,6 +5,7 @@
 @import "../scss/components/burger.css";
 @import "../scss/work.css";
 @import "../scss/about.css";
+@import "../scss/contact.css";
 :root {
   --font-family: "Fira Code", sans-serif;
   --primary: #c778dd;
@@ -396,6 +397,7 @@ body {
   padding-inline: calc(2px + 6 * ((100vw - 320px) / 1600));
   padding-block: calc(2px + 2 * ((100vw - 320px) / 1600));
   background-color: var(--background);
+  z-index: 2;
 }
 .who__content::before {
   top: -11%;
@@ -556,7 +558,7 @@ body {
 .content-skills__items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 1rem;
   gap: calc(10px + 6 * ((100vw - 320px) / 1600));
 }
 @media (min-width: 50.0613rem) {

@@ -7,6 +7,7 @@
 @import "../scss/components/burger.css";
 @import "../scss/work.css";
 @import "../scss/about.css";
+@import "../scss/contact.css";
 // @import "../scss/components/ibj.scss";
 // $maxWidth: 1024;
 // @include adaptive-font(40, 24);(Использовать для адаптивного шрифта: 1 - мах знач, 2 - мин знач.)
@@ -435,6 +436,7 @@ body {
 			@include adaptive-value("padding-inline", 8, 2, 0);
 			@include adaptive-value("padding-block", 4, 2, 0);
 			background-color: var(--background);
+			z-index: 2;
 		}
 		&::before {
 			top: -11%;
@@ -689,7 +691,7 @@ body {
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 16px;
+		gap: 1rem;
 		@include adaptive-value("gap", 16, 10, 0);
 
 		@include three-col-layout; // базовое состояние
@@ -707,18 +709,8 @@ body {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
-			// grid-template-columns: repeat(3, 1fr);
-			// @include three-col-layout; // снова подключаем
 		}
 
-		// @media (max-width: 479.98px) {
-		// 	grid-template-columns: repeat(2, 1fr);
-		// 	.item-skill__item {
-		// 		grid-row: auto;
-		// 		grid-column: auto;
-		// 		align-self: auto;
-		// 	}
-		// }
 	}
 }
 
@@ -864,7 +856,6 @@ body {
 
 .contacts {
 	display: flex;
-	// justify-content: start;
 	align-items: center;
 	@include adaptive-value("gap", 121, 20, 0);
 

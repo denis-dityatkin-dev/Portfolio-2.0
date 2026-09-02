@@ -61,17 +61,53 @@
 				</div>
 		</header>
 		<main class="main">
-			<section class="main-section --anim">
-				<div class="main-section__line anim--down"></div>
-				<div class="main-section__social social">
-					<div class="social__items">
-						<a href="https://github.com/denis-dityatkin-dev?tab=repositories" target="_blank" class="social__item icon-github anim--delay"></a>
-						<a href="https://www.linkedin.com/in/denis-dityatkin-908346b7/" target="_blank" class="social__item icon-linkedin anim--delay"></a>
-						<a href="tel:380990633215" target="_blank" class="social__item icon-telegram anim--delay"></a>
+			<section class="contact --anim">
+				<!-- Боковая панель вне потока -->
+				<aside class="contact__panel work__section-panel">
+					<div class="work__section-line social-line anim--down"></div>
+					<div class="work__section-social social">
+						<div class="social__items">
+							<a href="https://github.com/..." target="_blank" class="social__item icon-github anim--delay"></a>
+							<a href="https://www.linkedin.com/..." target="_blank" class="social__item icon-linkedin anim--delay"></a>
+							<a href="tel:380990633215" target="_blank" class="social__item icon-telegram anim--delay"></a>
+						</div>
+					</div>
+				</aside>
+				<!-- Контент внутри ограничивающего контейнера -->
+				<div class="contact__container">
+					<div class="contact__content ">
+						<div class="contact__header content-section__header header__title">
+							<h2 class="title-big anim--delay-up"><span>/</span>contacts</h2>
+							<div class="sub-title anim--delay-up">Who am i?</div>
+						</div>
 					</div>
 				</div>
-				<div class="main-section__container">
+			</section>
+			<section class="contact-section --anim">
+				<div class="contact-section__container">
+					<div class="contact-section__body ">
+						<div class="contact-section__text anim--up">
+							<p>I’m interested in freelance opportunities. However, 
+								if you have any other requests or questions, don’t hesitate to contact me</p>
+						</div>
+						<div class="contact-section__contents">
+							<div class="contact-section__content contacts__content anim--delay-left">
+								<div class="contacts__title">Support me here</div>
+								<div class="contacts__items">
+									<div  class="contacts__item">4149500120690030</div>
+								</div>
+							</div>
+							<div class="contact-section__content contacts__content anim--delay-left">
+								<div class="contacts__title">Message me here</div>
+								<div class="contacts__items">
+									<a href="mailto:den04101990@gmail.com" target="_blank" class="contacts__item icon-email">den04101990@gmail.com</a>
+									<a href="tel:380990633215" target="_blank" class="contacts__item icon-telegram">@den_ka4ek</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
+				<img src="./images/projects/cube.svg" alt="dots" class="contact__cube decore--figure anim--rotate">
 			</section>
 		</main>
 		<footer class="footer --anim">
