@@ -96,7 +96,7 @@ body {
 }
 .social-line {
 	display: flex;
-		align-items: flex-start;
+	align-items: flex-start;
 	position: absolute;
 	top: 0;
 	left: 2.0625rem; // или calc(1.0625rem + 1rem)
@@ -472,6 +472,9 @@ body {
 	gap: 1.875rem;
 	@include adaptive-value("padding-bottom", 94, 40, 0);
 	&__container {
+		@media (min-width: 61.9988rem) {
+			@include adaptive-value("padding-left", 105, 15, 0);
+		}
 	}
 
 	&__header {
@@ -515,12 +518,9 @@ body {
 
 	&__items {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(min(330px, 100%), 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(min(310px, 100%), 1fr));
 		@include adaptive-value("gap", 16, 10, 0);
-		// @media (max-width: 61.9988rem) {
-		// 	flex-direction: column;
-		// 	align-items: stretch;
-		// }
+
 		&:not(:last-child) {
 			@include adaptive-value("margin-bottom", 90, 30, 0);
 		}
@@ -576,7 +576,17 @@ body {
 			color: var(--primary);
 		}
 	}
-
+	&__text {
+		line-height: 1.2;
+		p {
+			&:not(:last-child) {
+				margin-bottom: 0.625rem;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
 	&__link-title {
 	}
 }
@@ -710,7 +720,6 @@ body {
 			flex-wrap: wrap;
 			justify-content: center;
 		}
-
 	}
 }
 
