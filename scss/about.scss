@@ -131,8 +131,11 @@ $maxWidthContainer: 1054;
 .skills-section {
 	@include adaptive-value("padding-bottom", 83, 50, 0);
 	display: flex;
-	align-items: start;
+	align-items: flex-start;
+
 	&__container {
+		width: 100%;
+
 		@media (min-width: 61.9988rem) {
 			flex-grow: 1;
 		}
@@ -142,7 +145,9 @@ $maxWidthContainer: 1054;
 		@media (min-width: 61.9988rem) {
 			margin-left: 1.875rem;
 		}
+
 		@include adaptive-value("margin-bottom", 48, 20, 0);
+
 		h2 {
 			&::after {
 				display: none;
@@ -151,13 +156,18 @@ $maxWidthContainer: 1054;
 	}
 
 	&__body {
+		width: 100%;
+
 		@media (min-width: 61.9988rem) {
 			margin-left: 1.875rem;
+			width: calc(100% - 1.875rem);
 		}
 	}
 
 	&__content {
+		width: 100%;
 	}
+
 	&__dots {
 		top: 0;
 		margin-right: -3.1875rem;
@@ -165,16 +175,38 @@ $maxWidthContainer: 1054;
 }
 
 .content-skills-section {
-	&__items {
-		display: flex;
-		gap: 1rem;
-		flex-wrap: wrap;
-		@media (max-width: 61.9988rem) {
-			justify-content: center;
-		}
-	}
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    // Убедитесь, что НЕТ align-items: start
+    // По умолчанию стоит stretch – этого достаточно
+
+    @media (max-width: 61.9988rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (max-width: 47.9988rem) {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
+.item-skill {
+  &__item {
+    // УБЕРИТЕ любую фиксированную height (height: ...)
+    // Оставьте только:
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    // Если есть padding – оставляйте
+		&__item-text {
+			flex-grow: 1; // займёт всё свободное место
+		}
+  }
+}
 // ========= facts =======
 
 .facts {
