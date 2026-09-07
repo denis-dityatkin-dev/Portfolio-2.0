@@ -131,7 +131,7 @@ $maxWidthContainer: 1054;
 .skills-section {
 	@include adaptive-value("padding-bottom", 83, 50, 0);
 	display: flex;
-	align-items: flex-start;
+	// align-items: flex-start;
 
 	&__container {
 		width: 100%;
@@ -176,37 +176,72 @@ $maxWidthContainer: 1054;
 
 .content-skills-section {
   &__items {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-    // Убедитесь, что НЕТ align-items: start
-    // По умолчанию стоит stretch – этого достаточно
+    // display: grid;
+    // grid-template-columns: repeat(3, minmax(0, 1fr));
+    // gap: 1rem;
+    // // Убедитесь, что НЕТ align-items: start
+    // // По умолчанию стоит stretch – этого достаточно
 
-    @media (max-width: 61.9988rem) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+    // @media (max-width: 61.9988rem) {
+    //   grid-template-columns: repeat(2, minmax(0, 1fr));
+    // }
 
-    @media (max-width: 47.9988rem) {
-      grid-template-columns: 1fr;
-    }
+    // @media (max-width: 47.9988rem) {
+    //   grid-template-columns: 1fr;
+    // }
   }
 }
+
+// .item-skill {
+//   &__item {
+//     // УБЕРИТЕ любую фиксированную height (height: ...)
+//     // Оставьте только:
+//     width: 100%;
+//     min-width: 0;
+//     display: flex;
+//     flex-direction: column;
+//     box-sizing: border-box;
+//     // Если есть padding – оставляйте
+// 		&__item-text {
+// 			flex-grow: 1; // займёт всё свободное место
+// 		}
+//   }
+// }
 
 .item-skill {
-  &__item {
-    // УБЕРИТЕ любую фиксированную height (height: ...)
-    // Оставьте только:
-    width: 100%;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    // Если есть padding – оставляйте
-		&__item-text {
-			flex-grow: 1; // займёт всё свободное место
+
+	&__section {
+		display: grid;
+		grid-template-columns: repeat(
+			auto-fill,
+			minmax(min(310px, 100%), 1fr)
+		);
+
+		@include adaptive-value("gap", 16, 10, 0);
+
+		align-items: stretch;
+
+		&-item{
+			border: 0.0625rem solid var(--gray);
+			padding-block: 10px;
+			width: 100%;
+			min-width: 0;
+			display: flex;
+			flex-direction: column;
+			box-sizing: border-box;
+			flex-grow: 1;
 		}
-  }
+	}
+
+	&__item-title {
+	}
+
+	&__item-text {
+	}
 }
+.anim--delay {
+}
+
 // ========= facts =======
 
 .facts {
