@@ -259,7 +259,6 @@ $maxWidthContainer: 1054;
 	&__header {
 		@media (max-width: 61.9988rem){
 			display: flex;
-			justify-content: center;
 		}
 		&:not(:last-child) {
 			@include adaptive-value("margin-bottom", 26, 20, 0);
@@ -361,7 +360,8 @@ $maxWidthContainer: 1054;
   &__item {
     border: 0.0625rem solid var(--gray);
     padding: 0.5rem;
-    margin: 0;               // на всякий случай сбрасываем возможные margin
+    margin: 0;   
+		line-height: 1.3;            // на всякий случай сбрасываем возможные margin
     @media (min-width: 29.9988rem) {
       width: fit-content;
     }

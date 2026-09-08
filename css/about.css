@@ -170,7 +170,6 @@
 @media (max-width: 61.9988rem) {
   .facts__header {
     display: flex;
-    justify-content: center;
   }
 }
 .facts__header:not(:last-child) {
@@ -234,6 +233,7 @@
   border: 0.0625rem solid var(--gray);
   padding: 0.5rem;
   margin: 0;
+  line-height: 1.3;
 }
 @media (min-width: 29.9988rem) {
   .content-fact__item {
