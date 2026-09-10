@@ -1,718 +1,617 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Denis, a Frontend Developer specializing in responsive websites and landing pages."
+    />
 
-	<meta
-		name="description"
-		content="Contact Denis, a Frontend Developer specializing in responsive websites and landing pages."
-	>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
-	<link rel="icon" href="favicon.png" type="image/png">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/main.css">
+    <title>Denis — Contacts | Frontend Developer</title>
+  </head>
 
-	<title>Denis — Contacts | Frontend Developer</title>
-</head>
+  <body>
+    <div class="wrapper">
+      <!-- HEADER -->
+      <header id="navbar" class="header">
+        <div class="header__container">
+          <a data-goto=".wrapper" href="#" class="header__logo"> Denis </a>
 
-<body>
-	<div class="wrapper">
+          <div class="header__menu menu">
+            <nav id="menu" class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="index.html" class="menu__link">
+                    <span>#</span><span data-i18n="nav.home">home</span>
+                  </a>
+                </li>
 
-		<!-- HEADER -->
-		<header id="navbar" class="header">
-			<div class="header__container">
+                <li class="menu__item">
+                  <a href="works.html" class="menu__link">
+                    <span>#</span><span data-i18n="nav.works">works</span>
+                  </a>
+                </li>
 
-				<a
-					data-goto=".wrapper"
-					href="#"
-					class="header__logo"
-				>
-					Denis
-				</a>
+                <li class="menu__item">
+                  <a href="about.html" class="menu__link">
+                    <span>#</span><span data-i18n="nav.about">about-me</span>
+                  </a>
+                </li>
 
-				<div class="header__menu menu">
+                <li class="menu__item">
+                  <a href="contacts.html" class="menu__link menu__link-active">
+                    <span>#</span><span data-i18n="nav.contacts">contacts</span>
+                  </a>
+                </li>
 
-					<nav id="menu" class="menu__body">
+                <li class="menu__item">
+                  <div class="select-wrapper">
+                    <select
+                      id="lang-select"
+                      class="menu__link menu__link-select"
+                      aria-label="Select language"
+                    >
+                      <option value="en">EN</option>
+                      <option value="uk">UA</option>
+                    </select>
+                  </div>
+                </li>
+              </ul>
 
-						<ul class="menu__list">
+              <!-- HEADER SOCIALS -->
+              <div class="header__menu-social">
+                <div class="header__menu-items">
+                  <a
+                    href="https://github.com/denis-dityatkin-dev?tab=repositories"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social__item icon-github"
+                    aria-label="GitHub"
+                  ></a>
 
-							<li class="menu__item">
-								<a href="index.html" class="menu__link">
-									<span>#</span><span data-i18n="nav.home">home</span>
-								</a>
-							</li>
+                  <a
+                    href="https://www.linkedin.com/in/denis-dityatkin-908346b7/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social__item icon-linkedin"
+                    aria-label="LinkedIn"
+                  ></a>
 
-							<li class="menu__item">
-								<a href="works.html" class="menu__link">
-									<span>#</span><span data-i18n="nav.works">works</span>
-								</a>
-							</li>
+                  <a
+                    href="https://t.me/den_ka4ek"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social__item icon-telegram"
+                    aria-label="Telegram"
+                  ></a>
+                </div>
+              </div>
+            </nav>
+          </div>
 
-							<li class="menu__item">
-								<a href="about.html" class="menu__link">
-									<span>#</span><span data-i18n="nav.about">about-me</span>
-								</a>
-							</li>
+          <div class="header__actions">
+            <button
+              type="button"
+              class="menu__icon icon-menu"
+              aria-label="Open menu"
+            >
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
 
-							<li class="menu__item">
-								<a
-									href="contacts.html"
-									class="menu__link menu__link-active"
-								>
-									<span>#</span><span data-i18n="nav.contacts">contacts</span>
-								</a>
-							</li>
+      <!-- MAIN -->
+      <main class="main">
+        <!-- CONTACT HEADER -->
+        <section class="contact --anim">
+          <!-- SIDEBAR SOCIALS -->
+          <aside class="contact__panel work__section-panel">
+            <div class="work__section-line social-line anim--down"></div>
 
-							<li class="menu__item">
-								<div class="select-wrapper">
-									<select
-										id="lang-select"
-										class="menu__link menu__link-select"
-										aria-label="Select language"
-									>
-										<option value="en">EN</option>
-										<option value="uk">UA</option>
-									</select>
-								</div>
-							</li>
+            <div class="work__section-social social">
+              <div class="social__items">
+                <a
+                  href="https://github.com/denis-dityatkin-dev?tab=repositories"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social__item icon-github anim--delay"
+                  aria-label="GitHub"
+                ></a>
 
-						</ul>
+                <a
+                  href="https://www.linkedin.com/in/denis-dityatkin-908346b7/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social__item icon-linkedin anim--delay"
+                  aria-label="LinkedIn"
+                ></a>
 
-						<!-- HEADER SOCIALS -->
-						<div class="header__menu-social">
-							<div class="header__menu-items">
+                <a
+                  href="https://t.me/den_ka4ek"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="social__item icon-telegram anim--delay"
+                  aria-label="Telegram"
+                ></a>
+              </div>
+            </div>
+          </aside>
 
-								<a
-									href="https://github.com/denis-dityatkin-dev?tab=repositories"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="social__item icon-github"
-									aria-label="GitHub"
-								></a>
+          <!-- PAGE TITLE -->
+          <div class="contact__container">
+            <div class="contact__content">
+              <div
+                class="contact__header content-section__header header__title"
+              >
+                <h1 class="title-big anim--delay-up"><span>/</span>contacts</h1>
 
-								<a
-									href="https://www.linkedin.com/in/denis-dityatkin-908346b7/"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="social__item icon-linkedin"
-									aria-label="LinkedIn"
-								></a>
+                <div class="sub-title anim--delay-up">Let's work together</div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-								<a
-									href="https://t.me/den_ka4ek"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="social__item icon-telegram"
-									aria-label="Telegram"
-								></a>
+        <!-- CONTACT / MESSAGE -->
+        <section class="contact-section --anim">
+          <div class="contact-section__container">
+            <div class="contact-section__body">
+              <div class="contact-section__text anim--up">
+                <p>
+                  Have a project in mind? Let’s turn your ideas into a fast,
+                  responsive and modern website. Feel free to get in touch and
+                  let’s discuss your project.
+                </p>
+              </div>
 
-							</div>
-						</div>
+              <div class="contact-section__contents">
+                <!-- MESSAGE ME -->
+                <div class="contact-section__content contacts__content action-rev anim--delay-left"
+                >
+                  <div class="contacts__title">Message me here</div>
 
-					</nav>
+                  <div class="contacts__items">
+                    <a
+                      href="mailto:den04101990@gmail.com"
+                      class="contacts__item icon-email"
+                    >
+                      den04101990@gmail.com
+                    </a>
 
-				</div>
+                    <a
+                      href="https://t.me/den_ka4ek"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="contacts__item icon-telegram"
+                    >
+                      @den_ka4ek
+                    </a>
+                  </div>
+                </div>
 
-				<div class="header__actions">
-					<button
-						type="button"
-						class="menu__icon icon-menu"
-						aria-label="Open menu"
-					>
-						<span></span>
-					</button>
-				</div>
+                <!-- AVAILABILITY -->
+                <div class="contact-section__content contacts__content anim--delay-left"
+                >
+                  <div class="contacts__title">Availability</div>
 
-			</div>
-		</header>
+                  <div class="contacts__items">
+                    <div class="contacts__item">Available for freelance</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <!-- DECORATION -->
+          <img
+            src="./images/projects/cube.svg"
+            alt=""
+            aria-hidden="true"
+            class="contact__cube decore--figure anim--rotate"
+          />
+        </section>
+				<!-- SERVICES / PRICING -->
+				<section class="pricing --anim">
+					<div class="pricing__container">
 
-		<!-- MAIN -->
-		<main class="main">
+						<div class="pricing__header content-section__header header__title">
 
-			<!-- CONTACT HEADER -->
-			<section class="contact --anim">
-
-				<!-- SIDEBAR SOCIALS -->
-				<aside class="contact__panel work__section-panel">
-
-					<div class="work__section-line social-line anim--down"></div>
-
-					<div class="work__section-social social">
-
-						<div class="social__items">
-
-							<a
-								href="https://github.com/denis-dityatkin-dev?tab=repositories"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="social__item icon-github anim--delay"
-								aria-label="GitHub"
-							></a>
-
-							<a
-								href="https://www.linkedin.com/in/denis-dityatkin-908346b7/"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="social__item icon-linkedin anim--delay"
-								aria-label="LinkedIn"
-							></a>
-
-							<a
-								href="https://t.me/den_ka4ek"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="social__item icon-telegram anim--delay"
-								aria-label="Telegram"
-							></a>
-
-						</div>
-
-					</div>
-
-				</aside>
-
-
-				<!-- PAGE TITLE -->
-				<div class="contact__container">
-
-					<div class="contact__content">
-
-						<div class="contact__header content-section__header header__title">
-
-							<h1 class="title-big anim--delay-up">
-								<span>/</span>contacts
-							</h1>
+							<h2 class="title-big anim--delay-up">
+								<span>/</span>services
+							</h2>
 
 							<div class="sub-title anim--delay-up">
-								Let's work together
+								What I can do for you
 							</div>
 
 						</div>
 
-					</div>
 
-				</div>
+						<div class="pricing__items">
 
-			</section>
+							<!-- LANDING PAGE -->
+							<article class="pricing__item anim--delay-up">
 
+								<div class="pricing__item-header">
 
-			<!-- CONTACT / MESSAGE -->
-			<section class="contact-section --anim">
+									<h3 class="pricing__title">
+										Landing Page
+									</h3>
 
-				<div class="contact-section__container">
+									<div class="pricing__price">
 
-					<div class="contact-section__body">
+										<div class="pricing__price-item">
+											<span>1–4 sections</span>
+											<span>from $60</span>
+										</div>
 
-						<div class="contact-section__text anim--up">
-							<p>
-								Have a project in mind? Let’s turn your ideas into
-								a fast, responsive and modern website.
-								Feel free to get in touch and let’s discuss your project.
-							</p>
-						</div>
+										<div class="pricing__price-item">
+											<span>5–7 sections</span>
+											<span>from $100</span>
+										</div>
 
+										<div class="pricing__price-item">
+											<span>8–10 sections</span>
+											<span>from $150</span>
+										</div>
 
-						<div class="contact-section__contents">
-
-							<!-- MESSAGE ME -->
-							<div class="contact-section__content contacts__content anim--delay-left">
-
-								<div class="contacts__title">
-									Message me here
-								</div>
-
-								<div class="contacts__items">
-
-									<a
-										href="mailto:den04101990@gmail.com"
-										class="contacts__item icon-email"
-									>
-										den04101990@gmail.com
-									</a>
-
-									<a
-										href="https://t.me/den_ka4ek"
-										target="_blank"
-										rel="noopener noreferrer"
-										class="contacts__item icon-telegram"
-									>
-										@den_ka4ek
-									</a>
-
-								</div>
-
-							</div>
-
-
-							<!-- AVAILABILITY -->
-							<div class="contact-section__content contacts__content anim--delay-left">
-
-								<div class="contacts__title">
-									Availability
-								</div>
-
-								<div class="contacts__items">
-
-									<div class="contacts__item">
-										Available for freelance
 									</div>
 
 								</div>
 
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
-
-
-				<!-- DECORATION -->
-				<img
-					src="./images/projects/cube.svg"
-					alt=""
-					aria-hidden="true"
-					class="contact__cube decore--figure anim--rotate"
-				>
-
-			</section>
-
-
-			<!-- SERVICES / PRICING -->
-			<section class="pricing --anim">
-
-				<div class="pricing__container">
-
-					<div class="pricing__header content-section__header header__title">
-
-						<h2 class="title-big anim--delay-up">
-							<span>/</span>services
-						</h2>
-
-						<div class="sub-title anim--delay-up">
-							What I can do for you
-						</div>
-
-					</div>
-
-
-					<div class="pricing__items">
-
-						<!-- LANDING PAGE -->
-						<article class="pricing__item anim--up">
-
-							<div class="pricing__item-header">
-								<h3 class="pricing__title">
-									Landing Page
-								</h3>
-
-								<div class="pricing__price">
-									from 3 000 ₴
+								<div class="pricing__text">
+									<p>
+										Responsive landing page based on your Figma
+										design with clean and structured HTML, SCSS
+										and JavaScript.
+									</p>
 								</div>
-							</div>
 
-							<div class="pricing__text">
-								<p>
-									Responsive landing page based on your
-									Figma design with clean and structured code.
-								</p>
-							</div>
-
-							<div class="pricing__time">
-								<span>Estimated time:</span>
-								3–5 days
-							</div>
-
-						</article>
-
-
-						<!-- MULTI-PAGE WEBSITE -->
-						<article class="pricing__item anim--up">
-
-							<div class="pricing__item-header">
-								<h3 class="pricing__title">
-									Multi-page Website
-								</h3>
-
-								<div class="pricing__price">
-									from 6 000 ₴
+								<div class="pricing__time">
+									<span>Estimated time:</span>
+									2–8 days
 								</div>
-							</div>
 
-							<div class="pricing__text">
-								<p>
-									Modern responsive website with multiple
-									pages, reusable components and adaptive layout.
-								</p>
-							</div>
-
-							<div class="pricing__time">
-								<span>Estimated time:</span>
-								5–10 days
-							</div>
-
-						</article>
+							</article>
 
 
-						<!-- FIGMA TO CODE -->
-						<article class="pricing__item anim--up">
+							<!-- MULTI-PAGE WEBSITE -->
+							<article class="pricing__item anim--delay-up">
 
-							<div class="pricing__item-header">
-								<h3 class="pricing__title">
-									Figma to Code
-								</h3>
+								<div class="pricing__item-header">
 
-								<div class="pricing__price">
-									from 3 000 ₴
+									<h3 class="pricing__title">
+										Multi-page Website
+									</h3>
+
+									<div class="pricing__price">
+
+										<div class="pricing__price-item">
+											<span>2–3 pages</span>
+											<span>from $150</span>
+										</div>
+
+										<div class="pricing__price-item">
+											<span>4–5 pages</span>
+											<span>from $200</span>
+										</div>
+
+										<div class="pricing__price-item">
+											<span>6+ pages</span>
+											<span>from $250</span>
+										</div>
+
+									</div>
+
 								</div>
-							</div>
-
-							<div class="pricing__text">
-								<p>
-									Accurate conversion of Figma designs into
-									HTML, SCSS and JavaScript.
-								</p>
-							</div>
 
-							<div class="pricing__time">
-								<span>Estimated time:</span>
-								3–7 days
-							</div>
+								<div class="pricing__text">
+									<p>
+										Modern responsive website with multiple pages,
+										adaptive layout, reusable components and
+										interactive elements.
+									</p>
+								</div>
 
-						</article>
+								<div class="pricing__time">
+									<span>Estimated time:</span>
+									5–12 days
+								</div>
 
-					</div>
+							</article>
 
 
-					<div class="pricing__note anim--up">
-						<p>
-							Final price and delivery time depend on the
-							complexity and requirements of the project.
-						</p>
-					</div>
+							<!-- FIGMA TO WEBSITE -->
+							<article class="pricing__item anim--delay-up">
 
-				</div>
+								<div class="pricing__item-header">
 
-			</section>
+									<h3 class="pricing__title">
+										Figma to Website
+									</h3>
 
+									<div class="pricing__price">
 
-			<!-- WHAT I DO -->
-			<section class="services --anim">
+										<div class="pricing__price-item">
+											<span>1–4 sections</span>
+											<span>from $60</span>
+										</div>
 
-				<div class="services__container">
+										<div class="pricing__price-item">
+											<span>5–7 sections</span>
+											<span>from $100</span>
+										</div>
 
-					<div class="services__header content-section__header header__title">
+										<div class="pricing__price-item">
+											<span>8–10 sections</span>
+											<span>from $150</span>
+										</div>
 
-						<h2 class="title-big anim--delay-up">
-							<span>/</span>what-i-do
-						</h2>
+									</div>
 
-						<div class="sub-title anim--delay-up">
-							What you get
-						</div>
+								</div>
 
-					</div>
+								<div class="pricing__text">
+									<p>
+										Accurate conversion of Figma designs into
+										a functional, responsive and modern website
+										using HTML, SCSS and JavaScript.
+									</p>
+								</div>
 
+								<div class="pricing__time">
+									<span>Estimated time:</span>
+									2–8 days
+								</div>
 
-					<div class="services__items">
-
-						<article class="services__item anim--up">
-							<h3>Responsive Design</h3>
-							<p>
-								Websites adapted for desktop, tablet and mobile devices.
-							</p>
-						</article>
-
-						<article class="services__item anim--up">
-							<h3>Figma to HTML</h3>
-							<p>
-								Accurate implementation of Figma designs using
-								HTML, SCSS and JavaScript.
-							</p>
-						</article>
-
-						<article class="services__item anim--up">
-							<h3>Clean Code</h3>
-							<p>
-								Structured and maintainable code using BEM
-								and modern frontend practices.
-							</p>
-						</article>
-
-						<article class="services__item anim--up">
-							<h3>Animations</h3>
-							<p>
-								Subtle animations and interactive elements
-								to make the website feel more dynamic.
-							</p>
-						</article>
-
-						<article class="services__item anim--up">
-							<h3>Cross-browser</h3>
-							<p>
-								Testing and adaptation for modern browsers
-								and different screen sizes.
-							</p>
-						</article>
-
-						<article class="services__item anim--up">
-							<h3>Git & GitHub</h3>
-							<p>
-								Project version control and clean repository
-								structure using Git and GitHub.
-							</p>
-						</article>
-
-					</div>
-
-				</div>
-
-			</section>
-
-
-			<!-- HOW I WORK -->
-			<section class="process --anim">
-
-				<div class="process__container">
-
-					<div class="process__header content-section__header header__title">
-
-						<h2 class="title-big anim--delay-up">
-							<span>/</span>how-i-work
-						</h2>
-
-						<div class="sub-title anim--delay-up">
-							Simple and transparent process
-						</div>
-
-					</div>
-
-
-					<div class="process__items">
-
-						<!-- STEP 01 -->
-						<article class="process__item anim--up">
-
-							<div class="process__number">
-								01
-							</div>
-
-							<div class="process__content">
-								<h3>Discussion</h3>
-
-								<p>
-									We discuss your requirements, design,
-									deadlines and project details.
-								</p>
-							</div>
-
-						</article>
-
-
-						<!-- STEP 02 -->
-						<article class="process__item anim--up">
-
-							<div class="process__number">
-								02
-							</div>
-
-							<div class="process__content">
-								<h3>Development</h3>
-
-								<p>
-									I turn the Figma design into a responsive
-									and functional website.
-								</p>
-							</div>
-
-						</article>
-
-
-						<!-- STEP 03 -->
-						<article class="process__item anim--up">
-
-							<div class="process__number">
-								03
-							</div>
-
-							<div class="process__content">
-								<h3>Testing</h3>
-
-								<p>
-									I check the website on different screen
-									sizes and modern browsers.
-								</p>
-							</div>
-
-						</article>
-
-
-						<!-- STEP 04 -->
-						<article class="process__item anim--up">
-
-							<div class="process__number">
-								04
-							</div>
-
-							<div class="process__content">
-								<h3>Delivery</h3>
-
-								<p>
-									You receive the finished website,
-									source code and project files.
-								</p>
-							</div>
-
-						</article>
-
-					</div>
-
-				</div>
-
-			</section>
-
-
-			<!-- FINAL CTA -->
-			<section class="contact-cta --anim">
-
-				<div class="contact-cta__container">
-
-					<div class="contact-cta__content anim--up">
-
-						<h2 class="title-big">
-							<span>/</span>let's work together
-						</h2>
-
-						<p>
-							Have an idea or a project?
-							Send me a message and let’s talk about it.
-						</p>
-
-						<a
-							href="mailto:den04101990@gmail.com"
-							class="button button__live contact-cta__button anim--zoom"
-						>
-							Get in touch →
-						</a>
-
-					</div>
-
-				</div>
-
-			</section>
-
-		</main>
-		<!-- FOOTER -->
-		<footer class="footer --anim">
-
-			<div class="footer__container">
-
-				<div class="footer__body body-footer">
-
-					<!-- FOOTER CONTENT -->
-					<div class="body-footer__content">
-
-						<div class="body-footer__title">
-
-							<a
-								href="#"
-								data-goto=".wrapper"
-								class="body-footer__logo header__logo anim--right"
-							>
-								Denis
-							</a>
-
-							<a
-								href="mailto:den04101990@gmail.com"
-								class="body-footer__mail anim--left"
-							>
-								den04101990@gmail.com
-							</a>
+							</article>
 
 						</div>
 
 
-						<div class="body-footer__text anim--up">
+						<div class="pricing__note anim--up">
 							<p>
-								Frontend Developer specializing in responsive
-								websites and landing pages.
+								Final price depends on the number of sections or pages,
+								design complexity, animations and required functionality.
 							</p>
 						</div>
 
 					</div>
+				</section>
+        <!-- WHAT I DO -->
+        <section class="services --anim">
+          <div class="services__container">
+            <div class="services__header content-section__header header__title">
+              <h2 class="title-big anim--delay-up"><span>/</span>what-i-do</h2>
 
+              <div class="sub-title anim--delay-up">What you get</div>
+            </div>
 
-					<!-- FOOTER SOCIALS -->
-					<div class="body-footer__media media-footer">
+            <div class="services__items">
+              <article class="services__item anim--delay-down">
+                <h3>Responsive Design</h3>
+                <p>Websites adapted for desktop, tablet and mobile devices.</p>
+              </article>
 
-						<div class="media-footer__title anim--left">
-							Media
-						</div>
+              <article class="services__item anim--delay-down">
+                <h3>Figma to HTML</h3>
+                <p>
+                  Accurate implementation of Figma designs using HTML, SCSS and
+                  JavaScript.
+                </p>
+              </article>
 
-						<div class="media-footer__social social-footer">
+              <article class="services__item anim--delay-down">
+                <h3>Clean Code</h3>
+                <p>
+                  Structured and maintainable code using BEM and modern frontend
+                  practices.
+                </p>
+              </article>
 
-							<div class="social-footer__items">
+              <article class="services__item anim--delay-up">
+                <h3>Animations</h3>
+                <p>
+                  Subtle animations and interactive elements to make the website
+                  feel more dynamic.
+                </p>
+              </article>
 
-								<a
-									href="https://github.com/denis-dityatkin-dev?tab=repositories"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="social-footer__item social__item icon-github anim--delay"
-									aria-label="GitHub"
-								></a>
+              <article class="services__item anim--delay-up">
+                <h3>Cross-browser</h3>
+                <p>
+                  Testing and adaptation for modern browsers and different
+                  screen sizes.
+                </p>
+              </article>
 
-								<a
-									href="https://www.linkedin.com/in/denis-dityatkin-908346b7/"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="social-footer__item social__item icon-linkedin anim--delay"
-									aria-label="LinkedIn"
-								></a>
+              <article class="services__item anim--delay-up">
+                <h3>Git & GitHub</h3>
+                <p>
+                  Project version control and clean repository structure using
+                  Git and GitHub.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
 
-								<a
-									href="https://t.me/den_ka4ek"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="social-footer__item social__item icon-telegram anim--delay"
-									aria-label="Telegram"
-								></a>
+        <!-- HOW I WORK -->
+        <section class="process --anim">
+          <div class="process__container">
+            <div class="process__header content-section__header header__title">
+              <h2 class="title-big anim--delay-up"><span>/</span>how-i-work</h2>
+              <div class="sub-title anim--delay-up">
+                Simple and transparent process
+              </div>
+            </div>
+            <div class="process__items">
+              <!-- STEP 01 -->
+              <article class="process__item anim--delay-up">
+                <div class="process__number">01</div>
+                <div class="process__content">
+                  <h3>Discussion</h3>
+                  <p>
+                    We discuss your requirements, design, deadlines and project
+                    details.
+                  </p>
+                </div>
+              </article>
+              <!-- STEP 02 -->
+              <article class="process__item anim--delay-up">
+                <div class="process__number">02</div>
 
-							</div>
+                <div class="process__content">
+                  <h3>Development</h3>
 
-						</div>
+                  <p>
+                    I turn the Figma design into a responsive and functional
+                    website.
+                  </p>
+                </div>
+              </article>
 
-					</div>
+              <!-- STEP 03 -->
+              <article class="process__item anim--delay-up">
+                <div class="process__number">03</div>
 
-				</div>
+                <div class="process__content">
+                  <h3>Testing</h3>
 
+                  <p>
+                    I check the website on different screen sizes and modern
+                    browsers.
+                  </p>
+                </div>
+              </article>
 
-				<!-- COPYRIGHT -->
-				<div class="footer__copy anim--up">
-					© 2026 Denis. All rights reserved.
-				</div>
+              <!-- STEP 04 -->
+              <article class="process__item anim--delay-up">
+                <div class="process__number">04</div>
 
-			</div>
+                <div class="process__content">
+                  <h3>Delivery</h3>
 
-		</footer>
+                  <p>
+                    You receive the finished website, source code and project
+                    files.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
 
-	</div>
+        <!-- FINAL CTA -->
+        <section class="contact-cta --anim">
+          <div class="contact-cta__container">
+            <div class="contact-cta__content anim--up">
+              <h2 class="title-big"><span>/</span>let's work together</h2>
 
+              <p>
+                Have an idea or a project? Send me a message and let’s talk
+                about it.
+              </p>
 
-	<!-- SCRIPTS -->
-	<script src="js/translate.js"></script>
-	<script src="js/components/burger.js"></script>
-	<script src="js/components/float-head.js"></script>
-	<script src="js/components/anim.js"></script>
+              <a
+                href="mailto:den04101990@gmail.com"
+                class="button button__live contact-cta__button anim--zoom"
+              >
+                Get in touch →
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- FOOTER -->
+      <footer class="footer --anim">
+        <div class="footer__container">
+          <div class="footer__body body-footer">
+            <!-- FOOTER CONTENT -->
+            <div class="body-footer__content">
+              <div class="body-footer__title">
+                <a
+                  href="#"
+                  data-goto=".wrapper"
+                  class="body-footer__logo header__logo anim--right"
+                >
+                  Denis
+                </a>
 
-	<!-- SWIPER -->
-	<!--
+                <a
+                  href="mailto:den04101990@gmail.com"
+                  class="body-footer__mail anim--left"
+                >
+                  den04101990@gmail.com
+                </a>
+              </div>
+
+              <div class="body-footer__text anim--up">
+                <p>
+                  Frontend Developer specializing in responsive websites and
+                  landing pages.
+                </p>
+              </div>
+            </div>
+
+            <!-- FOOTER SOCIALS -->
+            <div class="body-footer__media media-footer">
+              <div class="media-footer__title anim--left">Media</div>
+
+              <div class="media-footer__social social-footer">
+                <div class="social-footer__items">
+                  <a
+                    href="https://github.com/denis-dityatkin-dev?tab=repositories"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-footer__item social__item icon-github anim--delay"
+                    aria-label="GitHub"
+                  ></a>
+
+                  <a
+                    href="https://www.linkedin.com/in/denis-dityatkin-908346b7/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-footer__item social__item icon-linkedin anim--delay"
+                    aria-label="LinkedIn"
+                  ></a>
+
+                  <a
+                    href="https://t.me/den_ka4ek"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-footer__item social__item icon-telegram anim--delay"
+                    aria-label="Telegram"
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COPYRIGHT -->
+          <div class="footer__copy anim--up">
+            © 2026 Denis. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/translate.js"></script>
+    <script src="js/components/burger.js"></script>
+    <script src="js/components/float-head.js"></script>
+    <script src="js/components/anim.js"></script>
+
+    <!-- SWIPER -->
+    <!--
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/components/slider_swiper.js"></script>
 	-->
-
-</body>
+  </body>
 </html>
