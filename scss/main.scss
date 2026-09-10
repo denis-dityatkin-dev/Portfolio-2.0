@@ -475,6 +475,7 @@ body {
 	&__container {
 		@media (min-width: 61.9988rem) {
 			@include adaptive-value("padding-left", 105, 15, 0);
+
 		}
 	}
 
@@ -484,9 +485,11 @@ body {
 		align-items: center;
 		gap: 1.25rem;
 		@include adaptive-value("padding-bottom", 48, 20, 0);
+
 	}
 
 	&__title {
+
 		&::after {
 			@include adaptive-value("width", 511, 20, 0);
 		}
