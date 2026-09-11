@@ -1,5 +1,3 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600,700,800,900&display=swap");
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -7,116 +5,144 @@
   overflow: clip;
 }
 
-.wrapper > main {
-  flex-grow: 1;
-}
-
 [class*=__container] {
-  max-inline-size: 1200px;
+  max-inline-size: 1070px;
   margin-inline: auto;
   padding-inline: 0.9375rem;
 }
 
 body {
-  transition: all 0.5s ease;
-  font-family: "Montserrat", sans-serif;
-  background-color: #fff;
-  color: #333;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  background-color: #383838;
+  font-size: 18px;
+  line-height: 180%;
+}
+body.lock {
+  overflow: hidden;
 }
 
-.page__container {
-  position: relative;
+a {
+  color: crimson;
+  transition: color 0.5s;
 }
-.page__header {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
+a:hover {
+  color: aliceblue;
 }
-.page__title {
-  font-size: calc(24px + 16 * ((100vw - 320px) / 1600));
-  margin-bottom: calc(0px + 40 * ((100vw - 320px) / 1600));
-  line-height: 1.2;
-  font-weight: 700;
-}
-.page__theme {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.page__theme:hover {
-  transform: scale(1.1);
-}
-.page__reset {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-}
-.page__reset.active {
-  opacity: 1;
-  visibility: visible;
-}
-.page__reset::before {
-  content: "X";
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  width: 10px;
-  height: 10px;
-  font-size: 5px;
-  border-radius: 50%;
-  line-height: 10px;
-  color: #fff;
-  text-align: center;
-  background-color: #666;
-}
-.page__reset.active {
-  opacity: 1;
-  visibility: visible;
-}
-.page__reset:hover {
-  background-color: #888;
-}
-.page__text {
-  line-height: 1.5;
-}
-.page__text p:not(:last-child) {
+
+p:not(:last-child) {
   margin-bottom: 20px;
 }
 
-/* Темные темы */
-html.dark body {
-  background-color: #333;
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  margin-bottom: 50px;
+}
+.header__container {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: aliceblue;
+}
+.header__phone {
   color: #fff;
+  transition: color 0.5s;
 }
-html.dark .page__theme {
-  background: url("../images/sun.svg") center/70% no-repeat;
+.header__phone:hover {
+  color: red;
 }
 
-/* Светлые темы */
-html.light body {
+.content {
+  padding-top: 130px;
+}
+.content__section {
+  margin-bottom: 50px;
+}
+.content__section_row {
+  margin: 0 -20px 50px;
+}
+@media (min-width: 991.98px) {
+  .content__section_row {
+    display: flex;
+  }
+}
+.content__body {
+  flex: 0 1 50%;
+  padding: 0 20px;
+}
+.content__title {
+  font-size: 40px;
+  margin-bottom: 0.5em;
+}
+.content__image {
+  display: block;
+  padding: 0 20px;
+  flex: 0 1 50%;
+}
+.content__image img {
+  max-width: 100%;
+}
+.content__subtitle {
+  font-size: 30px;
+  margin-bottom: 0.5em;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s;
+}
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup.open .popup__content {
+  transform: perspective(600px) translate(0, 0) rotateX(0deg);
+  opacity: 1;
+}
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+.popup__content {
   background-color: #fff;
-  color: #333;
+  color: #000;
+  max-width: 800px;
+  padding: 30px;
+  position: relative;
+  opacity: 0;
+  transform: perspective(600px) translate(0, -100%) rotateX(45deg);
+  transition: all 0.8s;
 }
-html.light .page__theme {
-  background: url("../images/moon.svg") center/70% no-repeat;
+.popup__content_image {
+  padding: 0;
 }
-
-/* Системная тема по умолчанию */
-@media (prefers-color-scheme: dark) {
-  html:not(.light):not(.dark) body {
-    background-color: #333;
-    color: #fff;
-  }
-  html:not(.light):not(.dark) .page__theme {
-    background: url("../images/sun.svg") center/70% no-repeat;
-  }
-}pup__close {
+.popup__image img {
+  max-width: 100%;
+}
+.popup__close {
   position: absolute;
   top: 10px;
   right: 10px;
