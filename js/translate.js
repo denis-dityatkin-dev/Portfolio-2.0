@@ -635,14 +635,12 @@ const translations = {
 	}
 };
 
-
 // ==================== ТЕКУЩИЙ ЯЗЫК ====================
 
 // Английский используется по умолчанию.
 // После перезагрузки страницы снова будет EN.
 
 let currentLang = 'en';
-
 
 // ==================== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ====================
 
@@ -654,7 +652,6 @@ function setText(selector, text) {
 	}
 }
 
-
 function setTextAll(selector, text) {
 	const elements = document.querySelectorAll(selector);
 
@@ -662,7 +659,6 @@ function setTextAll(selector, text) {
 		element.textContent = text;
 	});
 }
-
 
 // ==================== ПРИМЕНЕНИЕ ПЕРЕВОДА ====================
 
@@ -680,7 +676,6 @@ function setLanguage(lang) {
 	// После перезагрузки снова будет английский.
 
 	document.documentElement.lang = lang;
-
 
 	// ==================================================
 	// HEADER
@@ -705,7 +700,6 @@ function setLanguage(lang) {
 		'.menu__item:nth-child(4) [data-i18n="nav.contacts"]',
 		t.navContacts
 	);
-
 
 	// ==================================================
 	// HERO
@@ -739,7 +733,6 @@ function setLanguage(lang) {
 		`;
 	}
 
-
 	// ==================================================
 	// WHO
 	// ==================================================
@@ -753,7 +746,6 @@ function setLanguage(lang) {
 		'.who__author',
 		t.whoAuthor
 	);
-
 
 	// ==================================================
 	// PROJECTS
@@ -774,7 +766,6 @@ function setLanguage(lang) {
 		t.viewAll
 	);
 
-
 	// Arct
 
 	setText(
@@ -786,7 +777,6 @@ function setLanguage(lang) {
 		'.projects__item:nth-child(1) .body-item-projects__text p',
 		t.arctText
 	);
-
 
 	// Arik
 
@@ -800,7 +790,6 @@ function setLanguage(lang) {
 		t.arikText
 	);
 
-
 	// Gronberg
 
 	setText(
@@ -813,7 +802,6 @@ function setLanguage(lang) {
 		t.gronbergText
 	);
 
-
 	// Кнопки проектов
 
 	setTextAll(
@@ -825,7 +813,6 @@ function setLanguage(lang) {
 		'.projects__item .item-projects__button.button__live:nth-child(2)',
 		t.github
 	);
-
 
 	// ==================================================
 	// SKILLS
@@ -855,7 +842,6 @@ function setLanguage(lang) {
 		'.item-skill__item:nth-child(3) .item-skill__item-title',
 		t.currentlyLearning
 	);
-
 
 	// ==================================================
 	// ABOUT HOME
@@ -892,6 +878,29 @@ function setLanguage(lang) {
 		t.readMore
 	);
 
+	// ==================================================
+	// CONTACTS HOME
+	// ==================================================
+
+	const homeContactsTitle = document.querySelector(
+		'.contacts__header .contacts__title'
+	);
+
+	if (homeContactsTitle) {
+		homeContactsTitle.innerHTML = `
+			<span>#</span>${t.contactsTitle}
+		`;
+	}
+
+	setText(
+		'.contacts__text p',
+		t.contactsText
+	);
+
+	setText(
+		'.contacts__subtitle',
+		t.messageMe
+	);
 
 	// ==================================================
 	// ABOUT PAGE
@@ -902,24 +911,20 @@ function setLanguage(lang) {
 		t.aboutPageSubtitle
 	);
 
-
 	setText(
 		'[data-i18n="aboutPageHello"]',
 		t.aboutPageHello
 	);
-
 
 	setText(
 		'[data-i18n="aboutPageText1"]',
 		t.aboutPageText1
 	);
 
-
 	setText(
 		'[data-i18n="aboutPageText2"]',
 		t.aboutPageText2
 	);
-
 
 	// About page title
 
@@ -933,7 +938,6 @@ function setLanguage(lang) {
 		`;
 	}
 
-
 	// About page skills title
 
 	const aboutSkillsTitle = document.querySelector(
@@ -945,7 +949,6 @@ function setLanguage(lang) {
 			<span>#</span>${t.aboutPageSkillsTitle}
 		`;
 	}
-
 
 	// About page skills
 
@@ -964,7 +967,6 @@ function setLanguage(lang) {
 		t.aboutPageCurrentlyLearning
 	);
 
-
 	// About page facts title
 
 	const factsTitle = document.querySelector(
@@ -976,7 +978,6 @@ function setLanguage(lang) {
 			<span>#</span>${t.aboutPageFactsTitle}
 		`;
 	}
-
 
 	// Fun facts
 
@@ -1025,7 +1026,6 @@ function setLanguage(lang) {
 		t.factWorkStudy
 	);
 
-
 	// ==================================================
 	// CONTACTS PAGE
 	// ==================================================
@@ -1042,14 +1042,12 @@ function setLanguage(lang) {
 		`;
 	}
 
-
 	// Page subtitle
 
 	setText(
 		'.contact__header .sub-title',
 		t.contactsPageSubtitle
 	);
-
 
 	// Main contact text
 
@@ -1058,14 +1056,12 @@ function setLanguage(lang) {
 		t.contactsPageText
 	);
 
-
 	// Message me
 
 	setText(
 		'.contact-section__content:nth-child(1) .contacts__title',
 		t.contactMessageTitle
 	);
-
 
 	// Availability
 
@@ -1074,12 +1070,10 @@ function setLanguage(lang) {
 		t.contactAvailabilityTitle
 	);
 
-
 	setText(
 		'.contact-section__content:nth-child(2) .contacts__item',
 		t.contactAvailability
 	);
-
 
 	// ==================================================
 	// SERVICES / PRICING
@@ -1095,12 +1089,10 @@ function setLanguage(lang) {
 		`;
 	}
 
-
 	setText(
 		'.pricing__header .sub-title',
 		t.servicesSubtitle
 	);
-
 
 	// --------------------------------------------------
 	// LANDING PAGE
@@ -1110,7 +1102,6 @@ function setLanguage(lang) {
 		'.pricing__item:nth-child(1) .pricing__title',
 		t.landingPageTitle
 	);
-
 
 	setText(
 		'.pricing__item:nth-child(1) .pricing__price-item:nth-child(1) span:nth-child(1)',
@@ -1122,7 +1113,6 @@ function setLanguage(lang) {
 		t.from60
 	);
 
-
 	setText(
 		'.pricing__item:nth-child(1) .pricing__price-item:nth-child(2) span:nth-child(1)',
 		t.landingPage5to7
@@ -1132,7 +1122,6 @@ function setLanguage(lang) {
 		'.pricing__item:nth-child(1) .pricing__price-item:nth-child(2) span:nth-child(2)',
 		t.from100
 	);
-
 
 	setText(
 		'.pricing__item:nth-child(1) .pricing__price-item:nth-child(3) span:nth-child(1)',
@@ -1144,12 +1133,10 @@ function setLanguage(lang) {
 		t.from150
 	);
 
-
 	setText(
 		'.pricing__item:nth-child(1) .pricing__text p',
 		t.landingPageText
 	);
-
 
 	// --------------------------------------------------
 	// MULTI-PAGE WEBSITE
@@ -1159,7 +1146,6 @@ function setLanguage(lang) {
 		'.pricing__item:nth-child(2) .pricing__title',
 		t.multiPageTitle
 	);
-
 
 	setText(
 		'.pricing__item:nth-child(2) .pricing__price-item:nth-child(1) span:nth-child(1)',
@@ -1171,7 +1157,6 @@ function setLanguage(lang) {
 		t.from150
 	);
 
-
 	setText(
 		'.pricing__item:nth-child(2) .pricing__price-item:nth-child(2) span:nth-child(1)',
 		t.multiPage4to5
@@ -1181,7 +1166,6 @@ function setLanguage(lang) {
 		'.pricing__item:nth-child(2) .pricing__price-item:nth-child(2) span:nth-child(2)',
 		t.from200
 	);
-
 
 	setText(
 		'.pricing__item:nth-child(2) .pricing__price-item:nth-child(3) span:nth-child(1)',
@@ -1193,12 +1177,10 @@ function setLanguage(lang) {
 		t.from250
 	);
 
-
 	setText(
 		'.pricing__item:nth-child(2) .pricing__text p',
 		t.multiPageText
 	);
-
 
 	// --------------------------------------------------
 	// FIGMA TO WEBSITE
@@ -1208,7 +1190,6 @@ function setLanguage(lang) {
 		'.pricing__item:nth-child(3) .pricing__title',
 		t.figmaWebsiteTitle
 	);
-
 
 	setText(
 		'.pricing__item:nth-child(3) .pricing__price-item:nth-child(1) span:nth-child(1)',
@@ -1220,7 +1201,6 @@ function setLanguage(lang) {
 		t.from60
 	);
 
-
 	setText(
 		'.pricing__item:nth-child(3) .pricing__price-item:nth-child(2) span:nth-child(1)',
 		t.landingPage5to7
@@ -1230,7 +1210,6 @@ function setLanguage(lang) {
 		'.pricing__item:nth-child(3) .pricing__price-item:nth-child(2) span:nth-child(2)',
 		t.from100
 	);
-
 
 	setText(
 		'.pricing__item:nth-child(3) .pricing__price-item:nth-child(3) span:nth-child(1)',
@@ -1242,12 +1221,10 @@ function setLanguage(lang) {
 		t.from150
 	);
 
-
 	setText(
 		'.pricing__item:nth-child(3) .pricing__text p',
 		t.figmaWebsiteText
 	);
-
 
 	// Pricing time
 
@@ -1276,14 +1253,12 @@ function setLanguage(lang) {
 		`;
 	}
 
-
 	// Pricing note
 
 	setText(
 		'.pricing__note p',
 		t.pricingNote
 	);
-
 
 	// ==================================================
 	// WHAT I DO
@@ -1299,17 +1274,14 @@ function setLanguage(lang) {
 		`;
 	}
 
-
 	setText(
 		'.services__header .sub-title',
 		t.whatIDoSubtitle
 	);
 
-
 	const serviceItems = document.querySelectorAll(
 		'.services__item'
 	);
-
 
 	const serviceTranslations = [
 
@@ -1345,7 +1317,6 @@ function setLanguage(lang) {
 
 	];
 
-
 	serviceItems.forEach((item, index) => {
 
 		if (serviceTranslations[index]) {
@@ -1354,12 +1325,10 @@ function setLanguage(lang) {
 
 			const text = item.querySelector('p');
 
-
 			if (title) {
 				title.textContent =
 					serviceTranslations[index][0];
 			}
-
 
 			if (text) {
 				text.textContent =
@@ -1369,7 +1338,6 @@ function setLanguage(lang) {
 		}
 
 	});
-
 
 	// ==================================================
 	// HOW I WORK
@@ -1385,17 +1353,14 @@ function setLanguage(lang) {
 		`;
 	}
 
-
 	setText(
 		'.process__header .sub-title',
 		t.howIWorkSubtitle
 	);
 
-
 	const processItems = document.querySelectorAll(
 		'.process__item'
 	);
-
 
 	const processTranslations = [
 
@@ -1421,7 +1386,6 @@ function setLanguage(lang) {
 
 	];
 
-
 	processItems.forEach((item, index) => {
 
 		if (processTranslations[index]) {
@@ -1430,12 +1394,10 @@ function setLanguage(lang) {
 
 			const text = item.querySelector('p');
 
-
 			if (title) {
 				title.textContent =
 					processTranslations[index][0];
 			}
-
 
 			if (text) {
 				text.textContent =
@@ -1445,7 +1407,6 @@ function setLanguage(lang) {
 		}
 
 	});
-
 
 	// ==================================================
 	// FINAL CTA
@@ -1461,18 +1422,15 @@ function setLanguage(lang) {
 		`;
 	}
 
-
 	setText(
 		'.contact-cta__content p',
 		t.finalCtaText
 	);
 
-
 	setText(
 		'.contact-cta__button',
 		t.getInTouch
 	);
-
 
 	// ==================================================
 	// FOOTER
@@ -1483,18 +1441,15 @@ function setLanguage(lang) {
 		t.footerText
 	);
 
-
 	setText(
 		'.media-footer__title',
 		t.media
 	);
 
-
 	setText(
 		'.footer__copy',
 		t.copyright
 	);
-
 
 	// ==================================================
 	// WORKS PAGE
@@ -1510,12 +1465,10 @@ function setLanguage(lang) {
 		`;
 	}
 
-
 	setText(
 		'.work .sub-title',
 		t.worksSubtitle
 	);
-
 
 	const completeSites = document.querySelector(
 		'.work .content-section__title'
@@ -1526,7 +1479,6 @@ function setLanguage(lang) {
 			<span>#</span>${t.completeSites}
 		`;
 	}
-
 
 	// ==================================================
 	// WORKS PROJECTS
@@ -1544,7 +1496,6 @@ function setLanguage(lang) {
 		t.arctWorkText
 	);
 
-
 	// Arik
 
 	setText(
@@ -1556,7 +1507,6 @@ function setLanguage(lang) {
 		'.work .projects__item:nth-child(2) .body-item-projects__text p',
 		t.arikWorkText
 	);
-
 
 	// Gronberg
 
@@ -1570,7 +1520,6 @@ function setLanguage(lang) {
 		t.gronbergWorkText
 	);
 
-
 	// Weeb
 
 	setText(
@@ -1582,7 +1531,6 @@ function setLanguage(lang) {
 		'.work .projects__item:nth-child(4) .body-item-projects__text p',
 		t.weebWorkText
 	);
-
 
 	// SaulDesign
 
@@ -1596,7 +1544,6 @@ function setLanguage(lang) {
 		t.saulDesignWorkText
 	);
 
-
 	// MinimalBlog
 
 	setText(
@@ -1608,7 +1555,6 @@ function setLanguage(lang) {
 		'.work .projects__item:nth-child(6) .body-item-projects__text p',
 		t.minimalBlogWorkText
 	);
-
 
 	// Freedom
 
@@ -1622,7 +1568,6 @@ function setLanguage(lang) {
 		t.freedomWorkText
 	);
 
-
 	// The Debonaire
 
 	setText(
@@ -1634,7 +1579,6 @@ function setLanguage(lang) {
 		'.work .projects__item:nth-child(8) .body-item-projects__text p',
 		t.debonaireWorkText
 	);
-
 
 	// The Wild Kingdom
 
@@ -1648,7 +1592,6 @@ function setLanguage(lang) {
 		t.wildKingdomWorkText
 	);
 
-
 	// Growfy
 
 	setText(
@@ -1660,7 +1603,6 @@ function setLanguage(lang) {
 		'.work .projects__item:nth-child(10) .body-item-projects__text p',
 		t.growfyWorkText
 	);
-
 
 	// HomeServices
 
@@ -1674,7 +1616,6 @@ function setLanguage(lang) {
 		t.homeServicesWorkText
 	);
 
-
 	// Lidia
 
 	setText(
@@ -1686,7 +1627,6 @@ function setLanguage(lang) {
 		'.work .projects__item:nth-child(12) .body-item-projects__text p',
 		t.lidiaWorkText
 	);
-
 
 	// ==================================================
 	// WORKS BUTTONS
@@ -1702,7 +1642,6 @@ function setLanguage(lang) {
 		t.github
 	);
 
-
 	// ==================================================
 	// SELECT
 	// ==================================================
@@ -1716,7 +1655,6 @@ function setLanguage(lang) {
 	}
 }
 
-
 // ==================================================
 // ИНИЦИАЛИЗАЦИЯ
 // ==================================================
@@ -1728,7 +1666,6 @@ document.addEventListener(
 		const select = document.getElementById(
 			'lang-select'
 		);
-
 
 		if (select) {
 
@@ -1744,7 +1681,6 @@ document.addEventListener(
 			);
 
 		}
-
 
 		// Всегда начинаем с английского
 
