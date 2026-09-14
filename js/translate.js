@@ -637,10 +637,29 @@ const translations = {
 
 // ==================== ТЕКУЩИЙ ЯЗЫК ====================
 
-// Английский используется по умолчанию.
-// После перезагрузки страницы снова будет EN.
+const LANG_STORAGE_KEY = 'portfolio-lang';
 
+// Английский используется по умолчанию,
+// но выбранный язык сохраняется между страницами.
 let currentLang = 'en';
+
+function getSavedLanguage() {
+	try {
+		const savedLang = localStorage.getItem(LANG_STORAGE_KEY);
+
+		return translations[savedLang] ? savedLang : 'en';
+	} catch (error) {
+		return 'en';
+	}
+}
+
+function saveLanguage(lang) {
+	try {
+		localStorage.setItem(LANG_STORAGE_KEY, lang);
+	} catch (error) {
+		// Если localStorage недоступен — просто игнорируем.
+	}
+}
 
 // ==================== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ====================
 
@@ -672,8 +691,9 @@ function setLanguage(lang) {
 
 	currentLang = lang;
 
-	// Не сохраняем язык в localStorage.
-	// После перезагрузки снова будет английский.
+	// Сохраняем выбранный язык,
+	// чтобы он не сбрасывался при переходе между страницами.
+	saveLanguage(lang);
 
 	document.documentElement.lang = lang;
 
@@ -1682,9 +1702,10 @@ document.addEventListener(
 
 		}
 
-		// Всегда начинаем с английского
+		// Если язык ещё не выбирали — будет английский.
+		// Если выбирали украинский — он сохранится при переходе.
 
-		setLanguage('en');
+		setLanguage(getSavedLanguage());
 
 	}
 );
