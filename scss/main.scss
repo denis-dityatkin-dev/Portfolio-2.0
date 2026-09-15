@@ -109,6 +109,18 @@ body {
 		display: none;
 	}
 }
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+}
+.skip-link:focus {
+  left: 0;
+}
 // ============== header ==============
 
 .header {
@@ -368,6 +380,7 @@ body {
 
 	&__picture {
 		max-width: 100%;
+		max-height: 26.4375rem;
 	}
 
 	&__subtitle {
