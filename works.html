@@ -4,11 +4,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta
-	name="description"
-	content="Contact Denis, a Frontend Developer specializing in responsive websites and landing pages."
->
-	<link rel="icon" href="favicon.png" type="image/png">
+
+  <!-- SEO -->
+  <meta
+    name="description"
+    content="Portfolio of Denis — Frontend Developer. Responsive websites and landing pages built with HTML, SCSS and JavaScript from Figma designs."
+  >
+  <link rel="canonical" href="https://denis-dityatkin-dev.github.io/works.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://denis-dityatkin-dev.github.io/works.html">
+  <meta property="og:title" content="Denis — Works | Frontend Developer">
+  <meta
+    property="og:description"
+    content="Responsive websites and landing pages built with HTML, SCSS and JavaScript from Figma designs."
+  >
+  <meta
+    property="og:image"
+    content="https://denis-dityatkin-dev.github.io/images/preview.jpg"
+  >
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Denis — Works | Frontend Developer">
+  <meta
+    name="twitter:description"
+    content="Responsive websites and landing pages built with HTML, SCSS and JavaScript from Figma designs."
+  >
+  <meta
+    name="twitter:image"
+    content="https://denis-dityatkin-dev.github.io/images/preview.jpg"
+  >
+
+  <meta name="theme-color" content="#0d0d0d">
+
+  <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Denis — Works | Frontend Developer</title>
@@ -21,7 +52,7 @@
 							Denis
 					</a>
 					<div class="header__menu menu">
-							<nav id="menu" class="menu__body">
+							<nav id="menu" class="menu__body" aria-label="Main navigation">
 									<ul class="menu__list">
 											<li class="menu__item">
 													<a href="index.html" class="menu__link ">
@@ -29,7 +60,7 @@
 													</a>
 											</li>
 											<li class="menu__item">
-													<a href="works.html" class="menu__link menu__link-active">
+													<a href="works.html" class="menu__link menu__link-active" aria-current="page">
 															<span>#</span><span data-i18n="nav.works">works</span>
 													</a>
 											</li>
@@ -45,7 +76,7 @@
 											</li>
 											<li class="menu__item">
 													<div class="select-wrapper">
-															<select id="lang-select" class="menu__link menu__link-select">
+															<select id="lang-select" class="menu__link menu__link-select" aria-label="Select language">
 																	<option value="en">EN</option>
 																	<option value="uk">UA</option>
 															</select>
@@ -80,7 +111,13 @@
 							</nav>
 					</div>
 					<div class="header__actions">
-							<button type="button" class="menu__icon icon-menu">
+							<button
+								type="button"
+								class="menu__icon icon-menu"
+								aria-label="Open menu"
+								aria-expanded="false"
+								aria-controls="menu"
+							>
 									<span></span>
 							</button>
 					</div>	
@@ -92,14 +129,37 @@
 					<div class="work__section-line social-line anim--down"></div>
 					<div class="work__section-social social">
 						<div class="social__items">
-							<a href="https://github.com/denis-dityatkin-dev?tab=repositories" target="_blank" class="social__item icon-github anim--delay"></a>
-							<a href="https://www.linkedin.com/in/denis-dityatkin-908346b7/" target="_blank" class="social__item icon-linkedin anim--delay"></a>
-							<a href="tel:380990633215" target="_blank" class="social__item icon-telegram anim--delay"></a>
+							<a
+								href="https://github.com/denis-dityatkin-dev?tab=repositories"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="social__item icon-github anim--delay"
+								aria-label="GitHub"
+							></a>
+							<a
+								href="https://www.linkedin.com/in/denis-dityatkin-908346b7/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="social__item icon-linkedin anim--delay"
+								aria-label="LinkedIn"
+							></a>
+							<a
+								href="https://t.me/den_ka4ek"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="social__item icon-telegram anim--delay"
+								aria-label="Telegram"
+							></a>
 						</div>
 					</div>
 				</aside>
 				<div class="work__section-content content-section --anim">
-					<img src="./images/about/dots-1.svg" alt="dots" class="content-section__dots contacts__dots anim--rotate">
+					<img
+						src="./images/about/dots-1.svg"
+						alt=""
+						aria-hidden="true"
+						class="content-section__dots contacts__dots anim--rotate"
+					>
 					<div class="content-section__container">
 						<div class="content-section__header header__title">
 							<h2 class="title-big anim--delay-up"><span>/</span>projects</h2>
@@ -165,7 +225,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												class="button item-projects__button button__live"
-												aria-label="GitHub"
+												aria-label="Arct Website on GitHub"
 											>
 												GitHub →
 											</a>
@@ -229,7 +289,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												class="button item-projects__button button__live"
-												aria-label="GitHub"
+												aria-label="Arik Website on GitHub"
 											>
 												GitHub →
 											</a>
@@ -293,7 +353,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												class="button item-projects__button button__live"
-												aria-label="GitHub"
+												aria-label="Gronberg Website on GitHub"
 											>
 												GitHub →
 											</a>
@@ -357,7 +417,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												class="button item-projects__button button__live"
-												aria-label="GitHub"
+												aria-label="Weeb Website on GitHub"
 											>
 												GitHub →
 											</a>
@@ -421,7 +481,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												class="button item-projects__button button__live"
-												aria-label="GitHub"
+												aria-label="SaulDesign Website on GitHub"
 											>
 												GitHub →
 											</a>
@@ -485,7 +545,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												class="button item-projects__button button__live"
-												aria-label="GitHub"
+												aria-label="MinimalBlog Website on GitHub"
 											>
 												GitHub →
 											</a>
@@ -549,7 +609,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												class="button item-projects__button button__live"
-												aria-label="GitHub"
+												aria-label="Freedom Website on GitHub"
 											>
 												GitHub →
 											</a>
@@ -613,7 +673,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												class="button item-projects__button button__live"
-												aria-label="GitHub"
+												aria-label="The Debonaire Website on GitHub"
 											>
 												GitHub →
 											</a>
@@ -677,7 +737,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												class="button item-projects__button button__live"
-												aria-label="GitHub"
+												aria-label="The Wild Kingdom Website on GitHub"
 											>
 												GitHub →
 											</a>
@@ -741,7 +801,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												class="button item-projects__button button__live"
-												aria-label="GitHub"
+												aria-label="Growfy Website on GitHub"
 											>
 												GitHub →
 											</a>
@@ -805,7 +865,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												class="button item-projects__button button__live"
-												aria-label="GitHub"
+												aria-label="HomeServices Website on GitHub"
 											>
 												GitHub →
 											</a>
@@ -869,7 +929,7 @@
 												target="_blank"
 												rel="noopener noreferrer"
 												class="button item-projects__button button__live"
-												aria-label="GitHub"
+												aria-label="Lidia Website on GitHub"
 											>
 												GitHub →
 											</a>
@@ -881,7 +941,12 @@
 							</div>
 						</div>
 					</div>
-					<img src="./images/projects/cube.svg" alt="who__cube " class="content-section__cube about__cube cube anim--rotate-rev">
+					<img
+						src="./images/projects/cube.svg"
+						alt=""
+						aria-hidden="true"
+						class="content-section__cube about__cube cube anim--rotate-rev"
+					>
 				</div>
 			</section>
 		</main>

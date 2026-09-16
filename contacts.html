@@ -4,10 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
     <meta
       name="description"
-      content="Contact Denis, a Frontend Developer specializing in responsive websites and landing pages."
+      content="Contact Denis — Frontend Developer available for freelance projects. Responsive websites, landing pages and Figma-to-HTML conversion."
     />
+    <link rel="canonical" href="https://denis-dityatkin-dev.github.io/contacts.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://denis-dityatkin-dev.github.io/contacts.html" />
+    <meta property="og:title" content="Denis — Contacts | Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Available for freelance projects. Responsive websites, landing pages and Figma-to-HTML conversion."
+    />
+    <meta
+      property="og:image"
+      content="https://denis-dityatkin-dev.github.io/images/preview.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Denis — Contacts | Frontend Developer" />
+    <meta
+      name="twitter:description"
+      content="Available for freelance projects. Responsive websites, landing pages and Figma-to-HTML conversion."
+    />
+    <meta
+      name="twitter:image"
+      content="https://denis-dityatkin-dev.github.io/images/preview.jpg"
+    />
+
+    <meta name="theme-color" content="#0d0d0d" />
 
     <link rel="icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="css/reset.css" />
@@ -24,7 +54,7 @@
           <a data-goto=".wrapper" href="#" class="header__logo"> Denis </a>
 
           <div class="header__menu menu">
-            <nav id="menu" class="menu__body">
+            <nav id="menu" class="menu__body" aria-label="Main navigation">
               <ul class="menu__list">
                 <li class="menu__item">
                   <a href="index.html" class="menu__link">
@@ -45,7 +75,11 @@
                 </li>
 
                 <li class="menu__item">
-                  <a href="contacts.html" class="menu__link menu__link-active">
+                  <a
+                    href="contacts.html"
+                    class="menu__link menu__link-active"
+                    aria-current="page"
+                  >
                     <span>#</span><span data-i18n="nav.contacts">contacts</span>
                   </a>
                 </li>
@@ -100,6 +134,8 @@
               type="button"
               class="menu__icon icon-menu"
               aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="menu"
             >
               <span></span>
             </button>
