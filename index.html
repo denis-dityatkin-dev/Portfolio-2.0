@@ -10,11 +10,11 @@
       name="description"
       content="Denis — Frontend Developer building fast, responsive websites and landing pages from Figma designs with HTML, SCSS and JavaScript."
     />
-    <link rel="canonical" href="https://denis-dityatkin-dev.github.io/" />
+    <link rel="canonical" href="https://denis-dityatkin-dev.github.io/Portfolio-2.0/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://denis-dityatkin-dev.github.io/" />
+    <meta property="og:url" content="https://denis-dityatkin-dev.github.io/Portfolio-2.0/" />
     <meta property="og:title" content="Denis — Frontend Developer" />
     <meta
       property="og:description"
@@ -22,8 +22,12 @@
     />
     <meta
       property="og:image"
-      content="https://denis-dityatkin-dev.github.io/images/preview.jpg"
+      content="https://denis-dityatkin-dev.github.io/Portfolio-2.0/images/preview.jpg"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Denis — Frontend Developer portfolio preview" />
+    <meta property="og:image:type" content="image/jpeg" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -34,8 +38,9 @@
     />
     <meta
       name="twitter:image"
-      content="https://denis-dityatkin-dev.github.io/images/preview.jpg"
+      content="https://denis-dityatkin-dev.github.io/Portfolio-2.0/images/preview.jpg"
     />
+    <meta name="twitter:image:alt" content="Denis — Frontend Developer portfolio preview" />
 
     <meta name="theme-color" content="#0d0d0d" />
 
@@ -45,7 +50,6 @@
 
     <title>Denis — Frontend Developer | Responsive Websites & Landing Pages</title>
   </head>
-
   <body>
     <div class="wrapper">
       <header id="navbar" class="header">
@@ -53,7 +57,7 @@
           <a data-goto=".wrapper" href="#" class="header__logo"> Denis </a>
 
           <div class="header__menu menu">
-            <nav id="menu" class="menu__body">
+            <nav id="menu" class="menu__body" aria-label="Main navigation">
               <ul class="menu__list">
                 <li class="menu__item">
                   <a
@@ -142,6 +146,7 @@
       </header>
 
       <main class="main">
+        <!-- ==================== HERO ==================== -->
         <section class="main-section --anim">
           <div class="main-section__line social-line anim--down"></div>
 
@@ -186,12 +191,23 @@
                 </p>
               </div>
 
-              <button
-                data-goto=".contacts"
-                class="button main-section__button button__live anim--zoom"
-              >
-                Let's work together
-              </button>
+              <div class="main-section__actions anim--zoom">
+                <button
+                  data-goto=".contacts"
+                  class="button main-section__button button__live"
+                >
+                  Let's work together
+                </button>
+
+                <a
+                  href="https://t.me/den_ka4ek"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="button main-section__button button__live"
+                >
+                  Telegram →
+                </a>
+              </div>
             </div>
 
             <div class="main-section__decor decor-main-section">
@@ -214,6 +230,7 @@
           </div>
         </section>
 
+        <!-- ==================== WHO ==================== -->
         <section class="who --anim">
           <div class="who__content">
             <div class="who__text anim--right">
@@ -230,6 +247,7 @@
           />
         </section>
 
+        <!-- ==================== PROJECTS ==================== -->
         <section class="projects --anim">
           <div class="projects__container">
             <div class="projects__header">
@@ -433,6 +451,7 @@
           />
         </section>
 
+        <!-- ==================== SKILLS ==================== -->
         <section class="skills --anim">
           <div class="skills__container">
             <div class="skills__header">
@@ -527,6 +546,67 @@
           </div>
         </section>
 
+        <!-- ==================== WHAT I DO ==================== -->
+        <section class="services --anim">
+          <div class="services__container">
+            <div class="services__header content-section__header header__title">
+              <h2 class="title-big anim--delay-up">
+                <span>#</span>what-i-do
+              </h2>
+
+              <div class="sub-title anim--delay-up">What you get</div>
+            </div>
+
+            <div class="services__items">
+              <article class="services__item anim--delay-down">
+                <h3>Responsive Design</h3>
+                <p>Websites adapted for desktop, tablet and mobile devices.</p>
+              </article>
+
+              <article class="services__item anim--delay-down">
+                <h3>Figma to HTML</h3>
+                <p>
+                  Accurate implementation of Figma designs using HTML, SCSS and
+                  JavaScript.
+                </p>
+              </article>
+
+              <article class="services__item anim--delay-down">
+                <h3>Clean Code</h3>
+                <p>
+                  Structured and maintainable code using BEM and modern frontend
+                  practices.
+                </p>
+              </article>
+
+              <article class="services__item anim--delay-up">
+                <h3>Animations</h3>
+                <p>
+                  Subtle animations and interactive elements to make the website
+                  feel more dynamic.
+                </p>
+              </article>
+
+              <article class="services__item anim--delay-up">
+                <h3>Cross-browser</h3>
+                <p>
+                  Testing and adaptation for modern browsers and different
+                  screen sizes.
+                </p>
+              </article>
+
+              <article class="services__item anim--delay-up">
+                <h3>Git & GitHub</h3>
+                <p>
+                  Project version control and clean repository structure using
+                  Git and GitHub.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== ABOUT ==================== -->
         <section class="about --anim">
           <img
             src="./images/projects/cube.svg"
@@ -591,6 +671,7 @@
           />
         </section>
 
+        <!-- ==================== CONTACTS ==================== -->
         <section class="contacts --anim">
           <img
             src="./images/about/dots-1.svg"
