@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700&display=swap");
 @import "../css/components.css";
 @import "../css/components/anim.css";
@@ -158,8 +159,8 @@
   padding-bottom: calc(40px + 40 * ((100vw - 320px) / 1600));
 }
 .pricing__items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(310px, 100%), 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: calc(10px + 6 * ((100vw - 320px) / 1600));
   align-items: stretch;
 }
@@ -170,6 +171,8 @@
   border: 0.0625rem solid var(--gray);
   display: flex;
   flex-direction: column;
+  flex: 1 1 310px; /* вместо grid-колонок: базовая ширина 310px, растягивается */
+  min-width: 0;
 }
 .pricing__item-header {
   padding: 0.5rem;
@@ -185,6 +188,7 @@
   padding-top: 0.625rem;
   color: var(--white);
   line-height: 1.3;
+  min-height: 5.8rem; /* 4 строки цены — подгоняем под "Адаптація під мобільні від 4 000 ₴" */
 }
 .pricing__text {
   flex-grow: 1;

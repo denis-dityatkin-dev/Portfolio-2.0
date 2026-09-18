@@ -43,7 +43,7 @@ const translations = {
 		skillsTitle: 'skills',
 		frontend: 'Frontend',
 		tools: 'Tools',
-		currentlyLearning: 'Currently Learning',
+		alsoTitle: 'Also',
 
 		aboutTitle: 'about-me',
 		aboutHello: "Hello, I'm Denis",
@@ -75,7 +75,6 @@ const translations = {
 		aboutPageSkillsTitle: 'skills',
 		aboutPageFrontend: 'Frontend',
 		aboutPageTools: 'Tools',
-		aboutPageCurrentlyLearning: 'Currently Learning',
 
 		aboutPageFactsTitle: 'my-fun-facts',
 
@@ -160,31 +159,42 @@ const translations = {
 		servicesTitle: 'services',
 		servicesSubtitle: 'What I can do for you',
 
+		// Landing Page
 		landingPageTitle: 'Landing Page',
 		landingPage1to4: '1–4 sections',
 		landingPage5to7: '5–7 sections',
 		landingPage8to10: '8–10 sections',
-		from60: 'from $60',
 		from100: 'from $100',
-		from150: 'from $150',
+		from180: 'from $180',
+		from280: 'from $280',
 		landingPageText:
 			'Responsive landing page based on your Figma design with clean and structured HTML, SCSS and JavaScript.',
 		estimatedTime: 'Estimated time:',
-		landingPageTime: '2–8 days',
+		landingPageTime: '3–8 days',
 
+		// Multi-page Website
 		multiPageTitle: 'Multi-page Website',
 		multiPage2to3: '2–3 pages',
 		multiPage4to5: '4–5 pages',
 		multiPage6plus: '6+ pages',
-		from200: 'from $200',
 		from250: 'from $250',
+		from400: 'from $400',
+		from600: 'from $600',
 		multiPageText:
 			'Modern responsive website with multiple pages, adaptive layout, reusable components and interactive elements.',
-		multiPageTime: '5–12 days',
+		multiPageTime: '7–15 days',
 
-		figmaWebsiteTitle: 'Figma to Website',
-		figmaWebsiteText:
-			'Accurate conversion of Figma designs into a functional, responsive and modern website using HTML, SCSS and JavaScript.',
+		// Website Improvements
+		improvementsTitle: 'Website Improvements',
+		improvementsSmallFixes: 'Small fixes',
+		improvementsNewSections: 'New sections',
+		improvementsResponsiveFixes: 'Responsive fixes',
+		from20: 'from $20',
+		from50: 'from $50',
+		improvementsText:
+			'Bug fixes, layout adjustments, new sections and responsive improvements for an existing website.',
+		improvementsTime: '1–5 days',
+
 		pricingNote:
 			'Final price depends on the number of sections or pages, design complexity, animations and required functionality.',
 
@@ -280,7 +290,7 @@ const translations = {
 		skillsTitle: 'навички',
 		frontend: 'Frontend',
 		tools: 'Інструменти',
-		currentlyLearning: 'Зараз вивчаю',
+		alsoTitle: 'Також',
 
 		aboutTitle: 'про мене',
 		aboutHello: 'Привіт, я Денис',
@@ -310,7 +320,6 @@ const translations = {
 		aboutPageSkillsTitle: 'навички',
 		aboutPageFrontend: 'Frontend',
 		aboutPageTools: 'Інструменти',
-		aboutPageCurrentlyLearning: 'Зараз вивчаю',
 		aboutPageFactsTitle: 'цікаві факти про мене',
 
 		factAutumn: 'Я люблю осінь більше, ніж літо',
@@ -385,31 +394,42 @@ const translations = {
 		servicesTitle: 'послуги',
 		servicesSubtitle: 'Що я можу для вас зробити',
 
+		// Landing Page
 		landingPageTitle: 'Лендінг',
 		landingPage1to4: '1–4 секції',
 		landingPage5to7: '5–7 секцій',
 		landingPage8to10: '8–10 секцій',
-		from60: 'від 2 500 ₴',
-		from100: 'від 4 200 ₴',
-		from150: 'від 6 300 ₴',
+		from100: 'від 4 000 ₴',
+		from180: 'від 7 500 ₴',
+		from280: 'від 11 500 ₴',
 		landingPageText:
 			'Адаптивний лендінг за вашим макетом Figma з чистим і структурованим HTML, SCSS та JavaScript.',
 		estimatedTime: 'Орієнтовний час:',
-		landingPageTime: '2–8 днів',
+		landingPageTime: '3–8 днів',
 
+		// Multi-page Website
 		multiPageTitle: 'Багатосторінковий сайт',
 		multiPage2to3: '2–3 сторінки',
 		multiPage4to5: '4–5 сторінок',
 		multiPage6plus: '6+ сторінок',
-		from200: 'від 8 400 ₴',
-		from250: 'від 10 500 ₴',
+		from250: 'від 10 000 ₴',
+		from400: 'від 16 500 ₴',
+		from600: 'від 25 000 ₴',
 		multiPageText:
 			'Сучасний адаптивний сайт із кількома сторінками, адаптивною версткою, повторно використовуваними компонентами та інтерактивними елементами.',
-		multiPageTime: '5–12 днів',
+		multiPageTime: '7–15 днів',
 
-		figmaWebsiteTitle: 'Figma → Website',
-		figmaWebsiteText:
-			'Точне перетворення макетів Figma на функціональний, адаптивний і сучасний сайт з використанням HTML, SCSS та JavaScript.',
+		// Website Improvements
+		improvementsTitle: 'Доопрацювання сайту',
+		improvementsSmallFixes: 'Дрібні правки',
+		improvementsNewSections: 'Нові секції',
+		improvementsResponsiveFixes: 'Адаптація під мобільні',
+		from20: 'від 800 ₴',
+		from50: 'від 2 000 ₴',
+		improvementsText:
+			'Виправлення помилок, коригування верстки, нові секції та адаптація існуючого сайту під мобільні пристрої.',
+		improvementsTime: '1–5 днів',
+
 		pricingNote:
 			'Фінальна ціна залежить від кількості секцій або сторінок, складності дизайну, анімацій та необхідного функціоналу.',
 
@@ -603,9 +623,9 @@ const PRICING_ITEMS = [
 		text: 'landingPageText',
 		time: 'landingPageTime',
 		prices: [
-			['landingPage1to4', 'from60'],
-			['landingPage5to7', 'from100'],
-			['landingPage8to10', 'from150']
+			['landingPage1to4', 'from100'],
+			['landingPage5to7', 'from180'],
+			['landingPage8to10', 'from280']
 		]
 	},
 	{
@@ -613,19 +633,19 @@ const PRICING_ITEMS = [
 		text: 'multiPageText',
 		time: 'multiPageTime',
 		prices: [
-			['multiPage2to3', 'from150'],
-			['multiPage4to5', 'from200'],
-			['multiPage6plus', 'from250']
+			['multiPage2to3', 'from250'],
+			['multiPage4to5', 'from400'],
+			['multiPage6plus', 'from600']
 		]
 	},
 	{
-		title: 'figmaWebsiteTitle',
-		text: 'figmaWebsiteText',
-		time: 'landingPageTime',
+		title: 'improvementsTitle',
+		text: 'improvementsText',
+		time: 'improvementsTime',
 		prices: [
-			['landingPage1to4', 'from60'],
-			['landingPage5to7', 'from100'],
-			['landingPage8to10', 'from150']
+			['improvementsSmallFixes', 'from20'],
+			['improvementsNewSections', 'from50'],
+			['improvementsResponsiveFixes', 'from100']
 		]
 	}
 ];
@@ -702,12 +722,12 @@ function setLanguage(lang) {
 	setTextAll('.projects__item .item-projects__button.button__live:nth-child(2)', t.github);
 
 	// -------- Skills home --------
-	['frontend', 'tools', 'currentlyLearning'].forEach((key, i) =>
+	['frontend', 'tools', 'alsoTitle'].forEach((key, i) =>
 		setText(`.item-skill__item:nth-child(${i + 1}) .item-skill__item-title`, t[key])
 	);
 
 	// -------- Skills about page --------
-	['aboutPageFrontend', 'aboutPageTools', 'aboutPageCurrentlyLearning'].forEach((key, i) =>
+	['aboutPageFrontend', 'aboutPageTools', 'alsoTitle'].forEach((key, i) =>
 		setText(`.skills-section .item-skill__section-item:nth-child(${i + 1}) .item-skill__item-title`, t[key])
 	);
 
