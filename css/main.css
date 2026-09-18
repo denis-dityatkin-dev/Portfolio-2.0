@@ -26,11 +26,16 @@
 }
 
 [class*=__container] {
+  width: 100%;
+  max-inline-size: 1054px;
   margin-inline: auto;
   padding-inline: 0.9375rem;
 }
 
 [class*=__content-container] {
+  width: 100%;
+  max-inline-size: 1054px;
+  margin-inline: auto;
   padding-inline: 0.9375rem;
 }
 
@@ -250,8 +255,11 @@ body {
   gap: calc(40px + 82 * ((100vw - 320px) / 1600));
 }
 .main-section__social {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   padding-left: 1.0625rem;
-  position: relative;
   z-index: 2;
 }
 @media (max-width: 47.9988rem) {
@@ -259,7 +267,7 @@ body {
     display: none;
   }
 }
-.main-section__content-container {
+.main-section__container {
   padding-top: calc(80px + 43 * ((100vw - 320px) / 1600));
   padding-bottom: calc(40px + 72 * ((100vw - 320px) / 1600));
   display: grid;
@@ -270,7 +278,7 @@ body {
        column-gap: 1.25rem;
 }
 @media (max-width: 47.9988rem) {
-  .main-section__content-container {
+  .main-section__container {
     grid-template-columns: auto;
     row-gap: 1.875rem;
   }
@@ -390,19 +398,22 @@ body {
   }
 }
 .who {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   padding-bottom: calc(40px + 46 * ((100vw - 320px) / 1600));
   gap: calc(40px + 206 * ((100vw - 320px) / 1600));
 }
+.who__container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 @media (max-width: 47.9988rem) {
-  .who {
+  .who__container {
     justify-content: center;
     padding-inline: 0.9375rem;
   }
 }
 .who__content {
+  display: inline-block;
   text-align: end;
   font-size: calc(18px + 6 * ((100vw - 320px) / 1600));
   color: var(--white);
@@ -443,11 +454,6 @@ body {
   align-items: center;
   gap: 1.875rem;
   padding-bottom: calc(40px + 54 * ((100vw - 320px) / 1600));
-}
-@media (min-width: 61.9988rem) {
-  .projects__container {
-    padding-left: calc(15px + 90 * ((100vw - 320px) / 1600));
-  }
 }
 .projects__header {
   display: flex;
@@ -782,7 +788,7 @@ body {
     display: none;
   }
 }
-.contacts__content-container {
+.contacts__container {
   flex-grow: 1;
 }
 .contacts__header:not(:last-child) {
