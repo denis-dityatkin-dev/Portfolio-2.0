@@ -64,12 +64,7 @@ $maxWidthContainer: 1054;
 	}
 
 	&__header {
-		@media (max-width: 72.5613rem) {
-			padding-left: 2.5rem;
-		}
-		@media (max-width: 61.9988rem) {
-			padding-left: 0rem;
-		}
+
 		text-align: left;
 		@include adaptive-value("padding-top", 114, 80, 0);
 	}
@@ -84,15 +79,8 @@ $maxWidthContainer: 1054;
 
 .contact-section {
 	@include adaptive-value("padding-bottom", 80, 40, 0);
-	display: flex;
-	gap: 1.25rem;
+
 	&__container {
-	}
-
-	&__title {
-	}
-
-	&__body {
 		display: flex;
 		justify-content: space-between;
 		gap: 1.25rem;
@@ -101,9 +89,16 @@ $maxWidthContainer: 1054;
 			justify-content: center;
 			flex-wrap: wrap;
 		}
-		@media (min-width: 61.9988rem) {
-			@include adaptive-value("padding-left", 80, 15, 0);
-		}
+	}
+
+	&__title {
+	}
+
+	&__body {
+
+		// @media (min-width: 61.9988rem) {
+		// 	@include adaptive-value("padding-left", 80, 15, 0);
+		// }
 	}
 
 	&__text {

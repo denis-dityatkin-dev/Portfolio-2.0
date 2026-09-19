@@ -53,14 +53,7 @@ $maxWidthContainer: 1054;
 	&__section {
 		position: relative; // контекст для абсолютной панели
 	}
-	&__padding {
-		@media (max-width: 1200.98px) {
-			padding-left: 80px;
-		}
-		@media (max-width: 991.98px) {
-			padding-left: 0px;
-		}
-	}
+
 	// Боковая панель – абсолютно слева
 	&__panel {
 		position: absolute;
@@ -84,12 +77,6 @@ $maxWidthContainer: 1054;
 		text-align: left;
 		@include adaptive-value("padding-top", 114, 80, 0);
 
-		@media (max-width: 1200.98px) {
-			padding-left: 80px;
-		}
-		@media (max-width: 991.98px) {
-			padding-left: 0px;
-		}
 	}
 
 	&__content {

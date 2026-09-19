@@ -109,21 +109,21 @@ body {
 	background-color: var(--gray);
 	pointer-events: none;
 	z-index: 1;
-	@media (max-width: 47.9988rem) {
+	@media (max-width: 71.3113rem) {
 		display: none;
 	}
 }
 .skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  background: #000;
-  color: #fff;
-  padding: 8px 16px;
-  z-index: 1000;
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	background: #000;
+	color: #fff;
+	padding: 8px 16px;
+	z-index: 1000;
 }
 .skip-link:focus {
-  left: 0;
+	left: 0;
 }
 // ============== header ==============
 
@@ -290,13 +290,12 @@ body {
 		padding-left: 1.0625rem;
 		z-index: 2;
 
-		@media (max-width: 47.9988rem) {
+		@media (max-width: 1140.9808px) {
 			display: none;
 		}
 	}
 
 	&__line {
-		
 	}
 
 	&__container {
@@ -352,6 +351,9 @@ body {
 	}
 
 	&__button {
+		@media (max-width: 29.9988rem) {
+			width: 100%;
+		}
 	}
 
 	&__decor {
@@ -361,32 +363,27 @@ body {
 .decor-main-section {
 	&__box {
 		position: relative;
-		// Убираем общие width/height – зададим каждому индивидуально
 		&::before,
 		&::after {
 			content: "";
 			position: absolute;
-			// По умолчанию transform-origin: center, вращение вокруг центра элемента
 		}
 		&::before {
-			// Размер равен размеру изображения (33.91% от родителя)
 			width: 33.91%;
-			height: 33.91%; // предполагаем, что логотип квадратный
+			height: 33.91%;
 			top: 21.76%;
 			left: 0;
 			background: url("../images/main/logo-primary.svg") center / 100% 100% no-repeat;
-			animation: rotate 70s infinite linear; // по часовой
+			animation: rotate 70s infinite linear;
 		}
 		&::after {
-			// Размер равен размеру изображения (18.38% от родителя)
 			width: 18.38%;
-			height: 18.38%; // предполагаем, что точки квадратные
-			// Пересчитали позицию: исходные left: -8% → right: 8%, top: -21.5% → bottom: 21.5%
+			height: 18.38%;
 			right: 8%;
 			bottom: 21.5%;
 			z-index: 2;
 			background: url("../images/main/dots.svg") center / 100% 100% no-repeat;
-			animation: anti-rotate 70s infinite linear; // против часовой
+			animation: anti-rotate 70s infinite linear;
 		}
 	}
 
@@ -441,19 +438,19 @@ body {
 // ============ who =============
 
 .who {
-	
+	position: relative;
 	@include adaptive-value("padding-bottom", 86, 40, 0);
-	@include adaptive-value("gap", 246, 40, 0);
 
-&__container{
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	@media (max-width: 47.9988rem) {
-		justify-content: center;
-		padding-inline: 0.9375rem;
+	&__container {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		@media (max-width: 47.9988rem) {
+			justify-content: center;
+			padding-inline: 0.9375rem;
+		}
 	}
-}
+
 	&__content {
 		display: inline-block;
 		text-align: end;
@@ -494,20 +491,31 @@ body {
 
 	&__author {
 		display: inline-block;
-
 		border: 1px solid var(--gray);
 		@include adaptive-value("padding", 16, 10, 0);
 	}
 
 	&__cube {
+		position: absolute;
+		top: 50%;
+		left: calc(50% - #{$maxWidthContainer * 0.5}px - 4.6875rem);
+		translate: 0 -50%;
+		pointer-events: none;
+		z-index: 1;
+
+		@media (max-width: 71.3113rem) {
+			display: none;
+		}
 	}
 }
+
 // =========== projects =============
 
 .projects {
+	position: relative;
 	display: flex;
+	justify-content: center;
 	align-items: center;
-	gap: 1.875rem;
 	@include adaptive-value("padding-bottom", 94, 40, 0);
 
 	&__container {
@@ -523,7 +531,6 @@ body {
 	}
 
 	&__title {
-
 		&::after {
 			@include adaptive-value("width", 511, 20, 0);
 		}
@@ -578,7 +585,16 @@ body {
 	}
 
 	&__cube {
-		margin-right: -4.6875rem;
+		position: absolute;
+		top: 50%;
+		right: calc(50% - #{$maxWidthContainer * 0.5}px - 4.6875rem);
+		translate: 0 -50%;
+		pointer-events: none;
+		z-index: 1;
+
+		@media (max-width: 71.3113rem) {
+			display: none;
+		}
 	}
 }
 
@@ -619,7 +635,6 @@ body {
 		align-items: center;
 		gap: 0.625rem;
 
-		// Прижимает кнопки к нижней части карточки
 		margin-top: auto;
 	}
 
@@ -636,7 +651,6 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	// Занимает всё оставшееся место карточки
 	flex: 1;
 	@include adaptive-value("padding", 16, 10, 0);
 
@@ -659,8 +673,6 @@ body {
 	&__text {
 		line-height: 1.2;
 
-		// Растягивает текстовый блок,
-		// а кнопки уходят вниз
 		flex: 1;
 
 		&:not(:last-child) {
@@ -797,7 +809,6 @@ body {
 			transform: translateY(-2px);
 		}
 
-		// Frontend
 		&:nth-child(1) {
 			@media (min-width: 61.9988rem) {
 				grid-row: 1 / 3;
@@ -822,24 +833,26 @@ body {
 		display: flex;
 		gap: .625rem;
 		flex-wrap: wrap;
-
-		// p:not(:last-child) {
-		// 	margin-bottom: 0.5rem;
-		// }
 	}
 }
 // ======== about ========
 
 .about {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	@include adaptive-value("gap", 90, 20, 0);
-
 	@include adaptive-value("padding-bottom", 112, 40, 0);
+
 	&__cube {
-		margin-left: -4.6875rem;
-		@media (max-width: 61.9988rem) {
+		position: absolute;
+		top: 50%;
+		left: calc(50% - #{$maxWidthContainer * 0.5}px - 4.6875rem);
+		translate: 0 -50%;
+		pointer-events: none;
+		z-index: 1;
+
+		@media (max-width: 71.3113rem) {
 			display: none;
 		}
 	}
@@ -885,15 +898,23 @@ body {
 	}
 
 	&__button {
-		display: inline-block;
+		@media (min-width: 29.9988rem) {
+			display: inline-block;
+		}
 	}
 
 	&__decor {
 	}
 
 	&__dots {
-		margin-right: -1.5625rem;
-		@media (max-width: 61.9988rem) {
+		position: absolute;
+		top: 50%;
+		right: calc(50% - #{$maxWidthContainer * 0.5}px - 1.5625rem);
+		translate: 0 -50%;
+		pointer-events: none;
+		z-index: 1;
+
+		@media (max-width: 71.3113rem) {
 			display: none;
 		}
 	}
@@ -909,23 +930,23 @@ body {
 			position: absolute;
 			background-repeat: no-repeat;
 			background-position: center;
-			background-size: 100% 100%; // растягиваем SVG на всю площадь псевдоэлемента
+			background-size: 100% 100%;
 		}
 
 		&::before {
-			width: 24.78%; // 84/339
-			height: 24.78%; // 84/507
-			top: 11.63%; // 59/507
+			width: 24.78%;
+			height: 24.78%;
+			top: 11.63%;
 			left: 0;
 			background-image: url("../images/main/dots.svg");
 			animation: rotate 70s infinite linear;
 		}
 
 		&::after {
-			width: 30.68%; // 104/339
-			height: 11.05%; // 56/507
+			width: 30.68%;
+			height: 11.05%;
 			right: 0;
-			bottom: 33.92%; // 172/507
+			bottom: 33.92%;
 			background-image: url("../images/about/dots-2.svg");
 			animation: anti-rotate 70s infinite linear;
 		}
@@ -940,29 +961,35 @@ body {
 
 	&__picture {
 		max-width: 100%;
-		display: block; // чтобы img не было лишних отступов
+		display: block;
 	}
 }
 
 // ========= contacts ==========
 
 .contacts {
+	position: relative;
 	display: flex;
+	justify-content: center;
 	align-items: center;
-	@include adaptive-value("gap", 121, 20, 0);
-
 	@include adaptive-value("padding-bottom", 145, 40, 0);
+
 	&__dots {
-		margin-left: -3.25rem;
-		@media (max-width: 61.9988rem) {
+		position: absolute;
+		top: 50%;
+		left: calc(50% - #{$maxWidthContainer * 0.5}px - 3.25rem);
+		translate: 0 -50%;
+		pointer-events: none;
+		z-index: 1;
+
+		@media (max-width: 71.3113rem) {
 			display: none;
 		}
 	}
 
 	&__container {
-		flex-grow: 1;
-		// padding-inline: 0.9375rem;
 	}
+
 	&__header {
 		&:not(:last-child) {
 			@include adaptive-value("padding-bottom", 45, 20, 0);
@@ -1086,7 +1113,6 @@ body {
 		align-items: center;
 		@include adaptive-value("gap", 24, 10, 0);
 		margin-bottom: 1rem;
-
 	}
 
 	&__logo {

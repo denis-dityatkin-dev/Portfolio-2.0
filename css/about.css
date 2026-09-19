@@ -36,16 +36,6 @@
 .about-me__section {
   position: relative;
 }
-@media (max-width: 1200.98px) {
-  .about-me__padding {
-    padding-left: 80px;
-  }
-}
-@media (max-width: 991.98px) {
-  .about-me__padding {
-    padding-left: 0px;
-  }
-}
 .about-me__panel {
   position: absolute;
   left: 0;
@@ -65,16 +55,6 @@
 .about-me__header {
   text-align: left;
   padding-top: calc(80px + 34 * ((100vw - 320px) / 1600));
-}
-@media (max-width: 1200.98px) {
-  .about-me__header {
-    padding-left: 80px;
-  }
-}
-@media (max-width: 991.98px) {
-  .about-me__header {
-    padding-left: 0px;
-  }
 }
 .about-me__content {
   text-align: left;
