@@ -457,7 +457,7 @@ body {
 .who__cube {
   position: absolute;
   top: 50%;
-  left: calc(50% - 527px - 4.6875rem);
+  right: -3.125rem;
   translate: 0 -50%;
   pointer-events: none;
   z-index: 1;
@@ -523,12 +523,12 @@ body {
 .projects__cube {
   position: absolute;
   top: 50%;
-  right: calc(50% - 527px - 4.6875rem);
+  right: -4.6875rem;
   translate: 0 -50%;
   pointer-events: none;
   z-index: 1;
 }
-@media (max-width: 71.3113rem) {
+@media (max-width: 77.5613rem) {
   .projects__cube {
     display: none;
   }
@@ -722,12 +722,12 @@ body {
 .about__cube {
   position: absolute;
   top: 50%;
-  left: calc(50% - 527px - 4.6875rem);
+  left: calc(50% - 527px - 6.25rem);
   translate: 0 -50%;
   pointer-events: none;
   z-index: 1;
 }
-@media (max-width: 71.3113rem) {
+@media (max-width: 77.5rem) {
   .about__cube {
     display: none;
   }
@@ -771,7 +771,7 @@ body {
   pointer-events: none;
   z-index: 1;
 }
-@media (max-width: 71.3113rem) {
+@media (max-width: 77.5rem) {
   .about__dots {
     display: none;
   }
