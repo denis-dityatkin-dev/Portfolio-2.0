@@ -440,7 +440,7 @@ body {
   left: 3.5%;
 }
 .who__content::after {
-  bottom: 31%;
+  bottom: 33%;
   right: 4.5%;
 }
 .who__text {
@@ -722,7 +722,7 @@ body {
 .about__cube {
   position: absolute;
   top: 50%;
-  left: calc(50% - 527px - 6.25rem);
+  right: -calc(50%-527px-1.5625rem);
   translate: 0 -50%;
   pointer-events: none;
   z-index: 1;
@@ -766,7 +766,7 @@ body {
 .about__dots {
   position: absolute;
   top: 50%;
-  right: calc(50% - 527px - 1.5625rem);
+  left: -6.25rem;
   translate: 0 -50%;
   pointer-events: none;
   z-index: 1;
@@ -826,7 +826,7 @@ body {
 .contacts__dots {
   position: absolute;
   top: 50%;
-  left: calc(50% - 527px - 3.25rem);
+  left: -3.25rem;
   translate: 0 -50%;
   pointer-events: none;
   z-index: 1;

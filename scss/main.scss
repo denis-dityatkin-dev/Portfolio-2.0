@@ -478,7 +478,7 @@ body {
 			left: 3.5%;
 		}
 		&::after {
-			bottom: 31%;
+			bottom: 33%;
 			right: 4.5%;
 		}
 	}
@@ -844,7 +844,7 @@ body {
 	&__cube {
 		position: absolute;
 		top: 50%;
-		left: calc(50% - #{$maxWidthContainer * 0.5}px - 6.25rem);
+		right: -calc(50% - #{$maxWidthContainer * 0.5}px - 1.5625rem);
 		translate: 0 -50%;
 		pointer-events: none;
 		z-index: 1;
@@ -906,7 +906,8 @@ body {
 	&__dots {
 		position: absolute;
 		top: 50%;
-		right: calc(50% - #{$maxWidthContainer * 0.5}px - 1.5625rem);
+		// left: -calc(50% - #{$maxWidthContainer * 0.5}px - 6.25rem);
+		left: -6.25rem;
 		translate: 0 -50%;
 		pointer-events: none;
 		z-index: 1;
@@ -974,7 +975,8 @@ body {
 	&__dots {
 		position: absolute;
 		top: 50%;
-		left: calc(50% - #{$maxWidthContainer * 0.5}px - 3.25rem);
+		// left: calc(50% - #{$maxWidthContainer * 0.5}px - 3.25rem);
+		left: -3.25rem;
 		translate: 0 -50%;
 		pointer-events: none;
 		z-index: 1;
