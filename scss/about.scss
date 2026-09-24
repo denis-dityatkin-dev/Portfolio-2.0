@@ -7,6 +7,7 @@
 @import "../scss/components/burger.css";
 @import "../scss/work.css";
 @import "../scss/about.css";
+@import "../scss/main.css";
 // @import "../scss/components/ibj.scss";
 // $maxWidth: 1024;
 // @include adaptive-font(40, 24);(Использовать для адаптивного шрифта: 1 - мах знач, 2 - мин знач.)
@@ -34,12 +35,10 @@ $maxWidthContainer: 1054;
 	display: flex;
 	flex-direction: column;
 	overflow: clip; // работает с position: sticky;
-	// min-width: 320px;
-	// max-width: 1920px;
-	//block-size: 100%;
+
 }
 
-@import "../scss/main.css";
+
 
 // =============
 
@@ -60,7 +59,7 @@ $maxWidthContainer: 1054;
 		left: 0;
 		top: 0;
 		// width: 100px; // реальная ширина панели
-		z-index: 100;
+		// z-index: 1;
 		@media (max-width: 61.9988rem) {
 			display: none; // на мобильных скрываем
 		}

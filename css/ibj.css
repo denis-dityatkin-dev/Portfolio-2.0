@@ -22,7 +22,7 @@
 }
 @media (max-width: 47.9988rem) {
   [class*=page__],
-.footer {
+  .footer {
     padding-block: 2rem;
   }
 }

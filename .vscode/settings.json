@@ -1,44 +1,46 @@
 {
-	"workbench.colorTheme": "Default Dark+",
-	"files.autoSave": "afterDelay",
-	"editor.tabSize": 2,
-	"github-enterprise.uri": "https://github.com/denis-dityatkin-dev",
-	"editor.insertSpaces": false,
-	"editor.detectIndentation": false,
-	"editor.formatOnSave": true,
-	"liveServer.settings.AdvanceCustomBrowserCmdLine": "",
-	"liveServer.settings.donotShowInfoMsg": true,
-	"liveSassCompile.settings.generateMap": false,
-	"liveSassCompile.settings.formats": [
-		{
-			"format": "expanded",
-			"autoprefix": "last 5 versions",
-			"extensionName": ".css",
-			"savePath": "css"
-		}
-	],
-	"[scss]": {
-		"editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
-	},
-	"RainbowBrackets.depreciation-notice": false,
-	"[javascript]": {
-		"editor.defaultFormatter": "vscode.typescript-language-features"
-	},
-	"javascript.format.semicolons": "insert",
-	"typescript.format.semicolons": "insert",
-	"javascript.format.enable": true,
-	"typescript.format.enable": true,
-	"editor.formatOnType": true,
-	"javascript.preferences.includePackageJsonAutoImports": "on",
-	"typescript.preferences.includePackageJsonAutoImports": "on",
-	"[css]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[html]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"explorer.confirmDelete": false,
-	"php.validate.executablePath": "",
-	"git.autofetch": true,
-	"liveServer.settings.donotVerifyTags": true
+  "workbench.colorTheme": "Dark+",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "autoprefix": "last 5 versions",
+      "extensionName": ".css",
+      "savePath": "/css"
+    }
+  ],
+
+  "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.donotVerifyTags": true,
+
+  "explorer.confirmDelete": false,
+  "git.autofetch": true,
+
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "javascript.format.semicolons": "insert",
+  "typescript.format.semicolons": "insert"
 }
