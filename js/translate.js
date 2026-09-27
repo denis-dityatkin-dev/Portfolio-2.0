@@ -426,6 +426,7 @@ const translations = {
 		improvementsResponsiveFixes: 'Адаптація під мобільні',
 		from20: 'від 800 ₴',
 		from50: 'від 2 000 ₴',
+		from100: 'від 4 000 ₴',
 		improvementsText:
 			'Виправлення помилок, коригування верстки, нові секції та адаптація існуючого сайту під мобільні пристрої.',
 		improvementsTime: '1–5 днів',
@@ -584,6 +585,18 @@ const TEXT_MAP = {
 	'.work .sub-title': 'worksSubtitle'
 };
 
+// ==================== ОПРЕДЕЛЕНИЕ СТРАНИЦЫ ====================
+
+const PAGE = (() => {
+	const path = window.location.pathname;
+	if (path.includes('contacts')) return 'contacts';
+	if (path.includes('about')) return 'about';
+	if (path.includes('works')) return 'works';
+	return 'home';
+})();
+
+// ==================== ЗАГОЛОВКИ ====================
+
 // Заголовки с префиксом #: селектор → ключ
 const HASH_TITLES = {
 	'.projects__title': 'projectsTitle',
@@ -592,7 +605,9 @@ const HASH_TITLES = {
 	'.contacts__header .contacts__title': 'contactsTitle',
 	'.skills-section__header .skills__title': 'aboutPageSkillsTitle',
 	'.facts__title': 'aboutPageFactsTitle',
-	'.work .content-section__title': 'completeSites'
+	'.work .content-section__title': 'completeSites',
+	// what-i-do: # только на главной
+	...(PAGE === 'home' ? { '.services__header .title-big': 'whatIDoTitle' } : {})
 };
 
 // Заголовки с префиксом /: селектор → ключ
@@ -600,10 +615,11 @@ const SLASH_TITLES = {
 	'.about-me__header .title-big': 'aboutTitle',
 	'.contact__header .title-big': 'contactsTitle',
 	'.pricing__header .title-big': 'servicesTitle',
-	'.services__header .title-big': 'whatIDoTitle',
 	'.process__header .title-big': 'howIWorkTitle',
 	'.contact-cta__content .title-big': 'finalCtaTitle',
-	'.work .title-big': 'worksTitle'
+	'.work .title-big': 'worksTitle',
+	// what-i-do: / только на странице contacts
+	...(PAGE === 'contacts' ? { '.services__header .title-big': 'whatIDoTitle' } : {})
 };
 
 // ==================== СПИСКИ ПРОЕКТОВ ====================
