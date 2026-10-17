@@ -28,6 +28,10 @@ const translations = {
 		liveDemo: 'Live Demo →',
 		github: 'GitHub →',
 
+		starBucksTitle: 'StarBucks Website',
+		starBucksText:
+			'A coffee-brand landing page rebuilt from a Figma mockup — layered SCSS architecture, a fluid grid that adapts from ultra-wide monitors down to small phones, and JavaScript for the mobile navigation and scroll-triggered reveals.',
+
 		arctTitle: 'Arct Website',
 		arctText:
 			'Responsive website built from a Figma design with a clean layout, reusable components and mobile-friendly structure.',
@@ -94,6 +98,10 @@ const translations = {
 		worksTitle: 'projects',
 		worksSubtitle: 'List of my projects',
 		completeSites: 'complete-sites',
+
+		starBucksWorkTitle: 'StarBucks Website',
+		starBucksWorkText:
+			'A coffee-brand landing page rebuilt from a Figma mockup — layered SCSS architecture, a fluid grid that adapts from ultra-wide monitors down to small phones, and JavaScript for the mobile navigation and scroll-triggered reveals.',
 
 		arctWorkTitle: 'Arct Website',
 		arctWorkText:
@@ -275,6 +283,10 @@ const translations = {
 		liveDemo: 'Демо →',
 		github: 'GitHub →',
 
+		starBucksTitle: 'Сайт StarBucks',
+		starBucksText:
+			'Лендінг кавового бренду, відтворений за макетом Figma — багаторівнева SCSS-архітектура, гнучка сітка, що адаптується від широкоформатних моніторів до маленьких смартфонів, та JavaScript для мобільної навігації й появи елементів під час скролу.',
+
 		arctTitle: 'Сайт Arct',
 		arctText:
 			'Адаптивний сайт, створений за макетом Figma, з чистою структурою, повторно використовуваними компонентами та адаптацією під мобільні пристрої.',
@@ -335,6 +347,10 @@ const translations = {
 		worksTitle: 'проєкти',
 		worksSubtitle: 'Список моїх проєктів',
 		completeSites: 'готові сайти',
+
+		starBucksWorkTitle: 'Сайт StarBucks',
+		starBucksWorkText:
+			'Лендінг кавового бренду, відтворений за макетом Figma — багаторівнева SCSS-архітектура, гнучка сітка, що адаптується від широкоформатних моніторів до маленьких смартфонів, та JavaScript для мобільної навігації й появи елементів під час скролу.',
 
 		arctWorkTitle: 'Сайт Arct',
 		arctWorkText:
@@ -624,10 +640,10 @@ const SLASH_TITLES = {
 
 // ==================== СПИСКИ ПРОЕКТОВ ====================
 
-const PROJECTS_HOME = ['arct', 'arik', 'gronberg'];
+const PROJECTS_HOME = ['starBucks', 'arct', 'arik', 'gronberg'];
 
 const PROJECTS_WORKS = [
-	'arct', 'arik', 'gronberg', 'weeb', 'saulDesign', 'minimalBlog',
+	'starBucks', 'arct', 'arik', 'gronberg', 'weeb', 'saulDesign', 'minimalBlog',
 	'freedom', 'debonaire', 'wildKingdom', 'growfy', 'homeServices', 'lidia'
 ];
 
